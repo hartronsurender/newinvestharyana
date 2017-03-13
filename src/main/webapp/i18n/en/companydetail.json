@@ -1,0 +1,38 @@
+{
+    "investhryApp": {
+        "companydetail" : {
+            "home": {
+                "title": "Companydetails",
+                "createLabel": "Create a new Companydetail",
+                "createOrEditLabel": "Create or edit a Companydetail"
+            },
+            "created": "A new Companydetail is created with identifier {{ param }}",
+            "updated": "A Companydetail is updated with identifier {{ param }}",
+            "deleted": "A Companydetail is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Companydetail {{ id }}?"
+            },
+            "detail": {
+                "title": "Companydetail"
+            },
+            "investorid": "Investorid",
+            "promoter_md_director": "Promoter Md Director",
+            "designation": "Designation",
+            "businessentity": "Businessentity",
+            "businesstype": "Businesstype",
+            "number_of_director_mds_ceo": "Number Of Director Mds Ceo",
+            "list_director_md_ceo": "List Director Md Ceo",
+            "pannumber": "Pannumber",
+            "pancard": "Pancard",
+            "aadharnumber": "Aadharnumber",
+            "aadharcard": "Aadharcard",
+            "nri": "Nri",
+            "tin_vat_no": "Tin Vat No",
+            "tin_vat_document": "Tin Vat Document",
+            "cstno": "Cstno",
+            "cstdocument": "Cstdocument",
+            "moa_partnershipdeed_document": "Moa Partnershipdeed Document",
+            "registration_document": "Registration Document"
+        }
+    }
+}

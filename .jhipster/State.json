@@ -1,0 +1,19 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "countryid",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "statename",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170313074552",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "state",
+    "pagination": "no"
+}

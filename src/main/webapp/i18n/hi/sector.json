@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "sector" : {
+            "home": {
+                "title": "Sectors",
+                "createLabel": "नया Sector बनाएँ",
+                "createOrEditLabel": "Sector बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Sector [identifier: {{ param }}] तैयार है",
+            "updated": "एक Sector [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Sector [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Sector [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Sector"
+            },
+            "sectorname": "Sectorname"
+        }
+    }
+}

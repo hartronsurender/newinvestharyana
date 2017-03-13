@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "projecttype" : {
+            "home": {
+                "title": "Projecttypes",
+                "createLabel": "नया Projecttype बनाएँ",
+                "createOrEditLabel": "Projecttype बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Projecttype [identifier: {{ param }}] तैयार है",
+            "updated": "एक Projecttype [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Projecttype [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Projecttype [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Projecttype"
+            },
+            "projecttype_name": "Projecttype Name"
+        }
+    }
+}

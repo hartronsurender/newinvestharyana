@@ -1,0 +1,25 @@
+{
+    "investhryApp": {
+        "emissiondetail" : {
+            "home": {
+                "title": "Emissiondetails",
+                "createLabel": "Create a new Emissiondetail",
+                "createOrEditLabel": "Create or edit a Emissiondetail"
+            },
+            "created": "A new Emissiondetail is created with identifier {{ param }}",
+            "updated": "A Emissiondetail is updated with identifier {{ param }}",
+            "deleted": "A Emissiondetail is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Emissiondetail {{ id }}?"
+            },
+            "detail": {
+                "title": "Emissiondetail"
+            },
+            "projectid": "Projectid",
+            "particulars": "Particulars",
+            "capacity": "Capacity",
+            "type_of_fuel": "Type Of Fuel",
+            "air_pollution_control_device": "Air Pollution Control Device"
+        }
+    }
+}

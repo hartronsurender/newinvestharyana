@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "stateid",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "districtid",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "blockid",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "city_town_village_name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170313074903",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "city_town_village",
+    "pagination": "no"
+}

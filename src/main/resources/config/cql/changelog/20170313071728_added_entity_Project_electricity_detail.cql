@@ -1,0 +1,27 @@
+
+CREATE TABLE IF NOT EXISTS project_electricity_detail (
+    id uuid,
+    projectid uuid,
+    temporaryconnection blob,
+    temporaryconnection_content_type text,
+    load_required boolean,
+    existing_connecton boolean,
+    account_number text,
+    load_demand decimal,
+    load_demand_kva decimal,
+    new_load_demand_kw decimal,
+    new_load_demand_kva decimal,
+    load_demand_date timestamp,
+    regular_connection blob,
+    regular_connection_content_type text,
+    regular_load_required boolean,
+    regular_existing_connection boolean,
+    regular_uhbvn_dhbvn_customer_type uuid,
+    regular_account_number text,
+    regular_load_if_any_kw decimal,
+    regular_existing_load_kva decimal,
+    regular_new_load_demand_kw decimal,
+    regular_new_load_demand_kva decimal,
+    regular_demand_date timestamp,
+    PRIMARY KEY(id)
+);

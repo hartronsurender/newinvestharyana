@@ -1,0 +1,34 @@
+
+<div>
+    <h2><span data-translate="investhryApp.projectprocess_flowsteps.detail.title">Projectprocess Flowsteps</span> {{vm.projectprocess_flowsteps.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="investhryApp.projectprocess_flowsteps.projectid">Projectid</span></dt>
+        <dd>
+            <span>{{vm.projectprocess_flowsteps.projectid}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectprocess_flowsteps.process_flow_document">Process Flow Document</span></dt>
+        <dd>
+            <div ng-if="vm.projectprocess_flowsteps.process_flow_document">
+                <a ng-click="vm.openFile(vm.projectprocess_flowsteps.process_flow_documentContentType, vm.projectprocess_flowsteps.process_flow_document)" data-translate="entity.action.open">open</a>
+                {{vm.projectprocess_flowsteps.process_flow_documentContentType}}, {{vm.byteSize(vm.projectprocess_flowsteps.process_flow_document)}}
+            </div>
+        </dd>
+        <dt><span data-translate="investhryApp.projectprocess_flowsteps.steps">Steps</span></dt>
+        <dd>
+            <span>{{vm.projectprocess_flowsteps.steps}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="projectprocess-flowsteps-detail.edit({id:vm.projectprocess_flowsteps.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

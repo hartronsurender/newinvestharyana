@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "waste_water_disposal_mode" : {
+            "home": {
+                "title": "Waste_water_disposal_modes",
+                "createLabel": "नया Waste Water Disposal Mode बनाएँ",
+                "createOrEditLabel": "Waste Water Disposal Mode बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Waste Water Disposal Mode [identifier: {{ param }}] तैयार है",
+            "updated": "एक Waste Water Disposal Mode [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Waste Water Disposal Mode [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Waste Water Disposal Mode [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Waste Water Disposal Mode"
+            },
+            "disposal_mode": "Disposal Mode"
+        }
+    }
+}

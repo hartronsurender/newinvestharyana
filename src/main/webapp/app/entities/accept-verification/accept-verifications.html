@@ -1,0 +1,67 @@
+<div>
+    <h2 data-translate="investhryApp.accept_verification.home.title">Accept Verifications</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="accept-verification.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="investhryApp.accept_verification.home.createLabel">
+                        Create new Accept Verification
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="investhryApp.accept_verification.projectid">Projectid</span></th>
+                    <th><span data-translate="investhryApp.accept_verification.investorid">Investorid</span></th>
+                    <th><span data-translate="investhryApp.accept_verification.acceptcondition">Acceptcondition</span></th>
+                    <th><span data-translate="investhryApp.accept_verification.applicationdate">Applicationdate</span></th>
+                    <th><span data-translate="investhryApp.accept_verification.signature_document">Signature Document</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="accept_verification in vm.accept_verifications track by accept_verification.id">
+                    <td><a ui-sref="accept-verification-detail({id:accept_verification.id})">{{accept_verification.id}}</a></td>
+                    <td>{{accept_verification.projectid}}</td>
+                    <td>{{accept_verification.investorid}}</td>
+                    <td>{{accept_verification.acceptcondition}}</td>
+                    <td>{{accept_verification.applicationdate | date:'medium'}}</td>
+                    <td>
+                        <a ng-if="accept_verification.signature_document" ng-click="vm.openFile(accept_verification.signature_documentContentType, accept_verification.signature_document)" data-translate="entity.action.open">open</a>
+                        <span ng-if="accept_verification.signature_document">{{accept_verification.signature_documentContentType}}, {{vm.byteSize(accept_verification.signature_document)}}</span>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="accept-verification-detail({id:accept_verification.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="accept-verification.edit({id:accept_verification.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="accept-verification.delete({id:accept_verification.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "projectcategoryname",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170313074313",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "projectcategory",
+    "pagination": "no"
+}

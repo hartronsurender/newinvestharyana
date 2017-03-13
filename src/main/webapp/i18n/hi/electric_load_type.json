@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "electric_load_type" : {
+            "home": {
+                "title": "Electric_load_types",
+                "createLabel": "नया Electric Load Type बनाएँ",
+                "createOrEditLabel": "Electric Load Type बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Electric Load Type [identifier: {{ param }}] तैयार है",
+            "updated": "एक Electric Load Type [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Electric Load Type [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Electric Load Type [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Electric Load Type"
+            },
+            "regular_uhbvn_dhbvn_customer_type_name": "Regular Uhbvn Dhbvn Customer Type Name"
+        }
+    }
+}

@@ -1,0 +1,246 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myCompanydetailLabel" data-translate="investhryApp.companydetail.home.createOrEditLabel">Create or edit a Companydetail</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.companydetail.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.companydetail.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.companydetail.investorid" for="field_investorid">Investorid</label>
+            <input type="text" class="form-control" name="investorid" id="field_investorid"
+                    ng-model="vm.companydetail.investorid"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.companydetail.promoter_md_director" for="field_promoter_md_director">Promoter Md Director</label>
+            <input type="text" class="form-control" name="promoter_md_director" id="field_promoter_md_director"
+                    ng-model="vm.companydetail.promoter_md_director"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.companydetail.designation" for="field_designation">Designation</label>
+            <input type="text" class="form-control" name="designation" id="field_designation"
+                    ng-model="vm.companydetail.designation"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.companydetail.businessentity" for="field_businessentity">Businessentity</label>
+            <input type="text" class="form-control" name="businessentity" id="field_businessentity"
+                    ng-model="vm.companydetail.businessentity"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.companydetail.businesstype" for="field_businesstype">Businesstype</label>
+            <input type="text" class="form-control" name="businesstype" id="field_businesstype"
+                    ng-model="vm.companydetail.businesstype"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.companydetail.number_of_director_mds_ceo" for="field_number_of_director_mds_ceo">Number Of Director Mds Ceo</label>
+            <input type="number" class="form-control" name="number_of_director_mds_ceo" id="field_number_of_director_mds_ceo"
+                    ng-model="vm.companydetail.number_of_director_mds_ceo"
+                    />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setList_director_md_ceo($file, vm.companydetail)">
+            <label class="control-label" data-translate="investhryApp.companydetail.list_director_md_ceo" for="field_list_director_md_ceo">List Director Md Ceo</label>
+            <div>
+                <div ng-if="vm.companydetail.list_director_md_ceo" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.companydetail.list_director_md_ceoContentType, vm.companydetail.list_director_md_ceo)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.companydetail.list_director_md_ceoContentType}}, {{vm.byteSize(vm.companydetail.list_director_md_ceo)}}</span>
+                    <button type="button" ng-click="vm.companydetail.list_director_md_ceo=null;vm.companydetail.list_director_md_ceoContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setList_director_md_ceo($file, vm.companydetail)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="list_director_md_ceo" id="field_list_director_md_ceo"
+                    ng-model="vm.companydetail.list_director_md_ceo"
+                    />
+            <input type="hidden" class="form-control" name="list_director_md_ceoContentType" id="field_list_director_md_ceoContentType"
+                    ng-model="vm.companydetail.list_director_md_ceoContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.companydetail.pannumber" for="field_pannumber">Pannumber</label>
+            <input type="text" class="form-control" name="pannumber" id="field_pannumber"
+                    ng-model="vm.companydetail.pannumber"
+                    />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setPancard($file, vm.companydetail)">
+            <label class="control-label" data-translate="investhryApp.companydetail.pancard" for="field_pancard">Pancard</label>
+            <div>
+                <div ng-if="vm.companydetail.pancard" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.companydetail.pancardContentType, vm.companydetail.pancard)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.companydetail.pancardContentType}}, {{vm.byteSize(vm.companydetail.pancard)}}</span>
+                    <button type="button" ng-click="vm.companydetail.pancard=null;vm.companydetail.pancardContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setPancard($file, vm.companydetail)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="pancard" id="field_pancard"
+                    ng-model="vm.companydetail.pancard"
+                    />
+            <input type="hidden" class="form-control" name="pancardContentType" id="field_pancardContentType"
+                    ng-model="vm.companydetail.pancardContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.companydetail.aadharnumber" for="field_aadharnumber">Aadharnumber</label>
+            <input type="number" class="form-control" name="aadharnumber" id="field_aadharnumber"
+                    ng-model="vm.companydetail.aadharnumber"
+                    />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setAadharcard($file, vm.companydetail)">
+            <label class="control-label" data-translate="investhryApp.companydetail.aadharcard" for="field_aadharcard">Aadharcard</label>
+            <div>
+                <div ng-if="vm.companydetail.aadharcard" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.companydetail.aadharcardContentType, vm.companydetail.aadharcard)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.companydetail.aadharcardContentType}}, {{vm.byteSize(vm.companydetail.aadharcard)}}</span>
+                    <button type="button" ng-click="vm.companydetail.aadharcard=null;vm.companydetail.aadharcardContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setAadharcard($file, vm.companydetail)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="aadharcard" id="field_aadharcard"
+                    ng-model="vm.companydetail.aadharcard"
+                    />
+            <input type="hidden" class="form-control" name="aadharcardContentType" id="field_aadharcardContentType"
+                    ng-model="vm.companydetail.aadharcardContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.companydetail.nri" for="field_nri">Nri</label>
+            <input type="checkbox" class="form-control" name="nri" id="field_nri"
+                    ng-model="vm.companydetail.nri"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.companydetail.tin_vat_no" for="field_tin_vat_no">Tin Vat No</label>
+            <input type="text" class="form-control" name="tin_vat_no" id="field_tin_vat_no"
+                    ng-model="vm.companydetail.tin_vat_no"
+                    />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setTin_vat_document($file, vm.companydetail)">
+            <label class="control-label" data-translate="investhryApp.companydetail.tin_vat_document" for="field_tin_vat_document">Tin Vat Document</label>
+            <div>
+                <div ng-if="vm.companydetail.tin_vat_document" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.companydetail.tin_vat_documentContentType, vm.companydetail.tin_vat_document)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.companydetail.tin_vat_documentContentType}}, {{vm.byteSize(vm.companydetail.tin_vat_document)}}</span>
+                    <button type="button" ng-click="vm.companydetail.tin_vat_document=null;vm.companydetail.tin_vat_documentContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setTin_vat_document($file, vm.companydetail)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="tin_vat_document" id="field_tin_vat_document"
+                    ng-model="vm.companydetail.tin_vat_document"
+                    />
+            <input type="hidden" class="form-control" name="tin_vat_documentContentType" id="field_tin_vat_documentContentType"
+                    ng-model="vm.companydetail.tin_vat_documentContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.companydetail.cstno" for="field_cstno">Cstno</label>
+            <input type="text" class="form-control" name="cstno" id="field_cstno"
+                    ng-model="vm.companydetail.cstno"
+                    />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setCstdocument($file, vm.companydetail)">
+            <label class="control-label" data-translate="investhryApp.companydetail.cstdocument" for="field_cstdocument">Cstdocument</label>
+            <div>
+                <div ng-if="vm.companydetail.cstdocument" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.companydetail.cstdocumentContentType, vm.companydetail.cstdocument)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.companydetail.cstdocumentContentType}}, {{vm.byteSize(vm.companydetail.cstdocument)}}</span>
+                    <button type="button" ng-click="vm.companydetail.cstdocument=null;vm.companydetail.cstdocumentContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setCstdocument($file, vm.companydetail)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="cstdocument" id="field_cstdocument"
+                    ng-model="vm.companydetail.cstdocument"
+                    />
+            <input type="hidden" class="form-control" name="cstdocumentContentType" id="field_cstdocumentContentType"
+                    ng-model="vm.companydetail.cstdocumentContentType" />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setMoa_partnershipdeed_document($file, vm.companydetail)">
+            <label class="control-label" data-translate="investhryApp.companydetail.moa_partnershipdeed_document" for="field_moa_partnershipdeed_document">Moa Partnershipdeed Document</label>
+            <div>
+                <div ng-if="vm.companydetail.moa_partnershipdeed_document" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.companydetail.moa_partnershipdeed_documentContentType, vm.companydetail.moa_partnershipdeed_document)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.companydetail.moa_partnershipdeed_documentContentType}}, {{vm.byteSize(vm.companydetail.moa_partnershipdeed_document)}}</span>
+                    <button type="button" ng-click="vm.companydetail.moa_partnershipdeed_document=null;vm.companydetail.moa_partnershipdeed_documentContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setMoa_partnershipdeed_document($file, vm.companydetail)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="moa_partnershipdeed_document" id="field_moa_partnershipdeed_document"
+                    ng-model="vm.companydetail.moa_partnershipdeed_document"
+                    />
+            <input type="hidden" class="form-control" name="moa_partnershipdeed_documentContentType" id="field_moa_partnershipdeed_documentContentType"
+                    ng-model="vm.companydetail.moa_partnershipdeed_documentContentType" />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setRegistration_document($file, vm.companydetail)">
+            <label class="control-label" data-translate="investhryApp.companydetail.registration_document" for="field_registration_document">Registration Document</label>
+            <div>
+                <div ng-if="vm.companydetail.registration_document" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.companydetail.registration_documentContentType, vm.companydetail.registration_document)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.companydetail.registration_documentContentType}}, {{vm.byteSize(vm.companydetail.registration_document)}}</span>
+                    <button type="button" ng-click="vm.companydetail.registration_document=null;vm.companydetail.registration_documentContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setRegistration_document($file, vm.companydetail)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="registration_document" id="field_registration_document"
+                    ng-model="vm.companydetail.registration_document"
+                    />
+            <input type="hidden" class="form-control" name="registration_documentContentType" id="field_registration_documentContentType"
+                    ng-model="vm.companydetail.registration_documentContentType" />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

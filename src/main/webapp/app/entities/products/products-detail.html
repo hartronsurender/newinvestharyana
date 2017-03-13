@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="investhryApp.products.detail.title">Products</span> {{vm.products.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="investhryApp.products.projectid">Projectid</span></dt>
+        <dd>
+            <span>{{vm.products.projectid}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.products.main_product">Main Product</span></dt>
+        <dd>
+            <span>{{vm.products.main_product}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.products.product_quantity">Product Quantity</span></dt>
+        <dd>
+            <span>{{vm.products.product_quantity}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.products.units">Units</span></dt>
+        <dd>
+            <span>{{vm.products.units}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="products-detail.edit({id:vm.products.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

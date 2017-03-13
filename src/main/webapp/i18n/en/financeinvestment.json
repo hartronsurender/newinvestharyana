@@ -1,0 +1,32 @@
+{
+    "investhryApp": {
+        "financeinvestment" : {
+            "home": {
+                "title": "Financeinvestments",
+                "createLabel": "Create a new Financeinvestment",
+                "createOrEditLabel": "Create or edit a Financeinvestment"
+            },
+            "created": "A new Financeinvestment is created with identifier {{ param }}",
+            "updated": "A Financeinvestment is updated with identifier {{ param }}",
+            "deleted": "A Financeinvestment is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Financeinvestment {{ id }}?"
+            },
+            "detail": {
+                "title": "Financeinvestment"
+            },
+            "projectid": "Projectid",
+            "land_cost": "Land Cost",
+            "building_cost": "Building Cost",
+            "plan_machinery_cost": "Plan Machinery Cost",
+            "misc_assets": "Misc Assets",
+            "totalproject_cost": "Totalproject Cost",
+            "fdi_applicable": "Fdi Applicable",
+            "fdi_country": "Fdi Country",
+            "fdi_value": "Fdi Value",
+            "fdi_resource": "Fdi Resource",
+            "project_construction_start_date": "Project Construction Start Date",
+            "project_commercial_activity_date": "Project Commercial Activity Date"
+        }
+    }
+}

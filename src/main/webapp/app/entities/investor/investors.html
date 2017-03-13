@@ -1,0 +1,100 @@
+<div>
+    <h2 data-translate="investhryApp.investor.home.title">Investors</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="investor.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="investhryApp.investor.home.createLabel">
+                        Create new Investor
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="investhryApp.investor.mouapplicable">Mouapplicable</span></th>
+                    <th><span data-translate="investhryApp.investor.mousignyear">Mousignyear</span></th>
+                    <th><span data-translate="investhryApp.investor.moudocument">Moudocument</span></th>
+                    <th><span data-translate="investhryApp.investor.mouidnumber">Mouidnumber</span></th>
+                    <th><span data-translate="investhryApp.investor.investorphoto">Investorphoto</span></th>
+                    <th><span data-translate="investhryApp.investor.inv_f_name">Inv F Name</span></th>
+                    <th><span data-translate="investhryApp.investor.inv_m_name">Inv M Name</span></th>
+                    <th><span data-translate="investhryApp.investor.inv_l_name">Inv L Name</span></th>
+                    <th><span data-translate="investhryApp.investor.invaddress1">Invaddress 1</span></th>
+                    <th><span data-translate="investhryApp.investor.invaddress2">Invaddress 2</span></th>
+                    <th><span data-translate="investhryApp.investor.invaddress3">Invaddress 3</span></th>
+                    <th><span data-translate="investhryApp.investor.phone">Phone</span></th>
+                    <th><span data-translate="investhryApp.investor.mobile">Mobile</span></th>
+                    <th><span data-translate="investhryApp.investor.fax">Fax</span></th>
+                    <th><span data-translate="investhryApp.investor.emailprimary">Emailprimary</span></th>
+                    <th><span data-translate="investhryApp.investor.emailsecondary">Emailsecondary</span></th>
+                    <th><span data-translate="investhryApp.investor.country">Country</span></th>
+                    <th><span data-translate="investhryApp.investor.state">State</span></th>
+                    <th><span data-translate="investhryApp.investor.city">City</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="investor in vm.investors track by investor.id">
+                    <td><a ui-sref="investor-detail({id:investor.id})">{{investor.id}}</a></td>
+                    <td>{{investor.mouapplicable}}</td>
+                    <td>{{investor.mousignyear}}</td>
+                    <td>
+                        <a ng-if="investor.moudocument" ng-click="vm.openFile(investor.moudocumentContentType, investor.moudocument)" data-translate="entity.action.open">open</a>
+                        <span ng-if="investor.moudocument">{{investor.moudocumentContentType}}, {{vm.byteSize(investor.moudocument)}}</span>
+                    </td>
+                    <td>{{investor.mouidnumber}}</td>
+                    <td>
+                        <a ng-if="investor.investorphoto" ng-click="vm.openFile(investor.investorphotoContentType, investor.investorphoto)">
+                            <img data-ng-src="{{'data:' + investor.investorphotoContentType + ';base64,' + investor.investorphoto}}" style="max-height: 30px;" alt="investor image"/>
+                        </a>
+                        <span ng-if="investor.investorphoto">{{investor.investorphotoContentType}}, {{vm.byteSize(investor.investorphoto)}}</span>
+                    </td>
+                    <td>{{investor.inv_f_name}}</td>
+                    <td>{{investor.inv_m_name}}</td>
+                    <td>{{investor.inv_l_name}}</td>
+                    <td>{{investor.invaddress1}}</td>
+                    <td>{{investor.invaddress2}}</td>
+                    <td>{{investor.invaddress3}}</td>
+                    <td>{{investor.phone}}</td>
+                    <td>{{investor.mobile}}</td>
+                    <td>{{investor.fax}}</td>
+                    <td>{{investor.emailprimary}}</td>
+                    <td>{{investor.emailsecondary}}</td>
+                    <td>{{investor.country}}</td>
+                    <td>{{investor.state}}</td>
+                    <td>{{investor.city}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="investor-detail({id:investor.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="investor.edit({id:investor.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="investor.delete({id:investor.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

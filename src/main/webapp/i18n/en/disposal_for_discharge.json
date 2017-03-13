@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "disposal_for_discharge" : {
+            "home": {
+                "title": "Disposal For Discharges",
+                "createLabel": "Create a new Disposal For Discharge",
+                "createOrEditLabel": "Create or edit a Disposal For Discharge"
+            },
+            "created": "A new Disposal For Discharge is created with identifier {{ param }}",
+            "updated": "A Disposal For Discharge is updated with identifier {{ param }}",
+            "deleted": "A Disposal For Discharge is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Disposal For Discharge {{ id }}?"
+            },
+            "detail": {
+                "title": "Disposal For Discharge"
+            },
+            "disposal_for_discharge_type": "Disposal For Discharge Type"
+        }
+    }
+}

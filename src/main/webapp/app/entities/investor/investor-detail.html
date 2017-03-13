@@ -1,0 +1,103 @@
+
+<div>
+    <h2><span data-translate="investhryApp.investor.detail.title">Investor</span> {{vm.investor.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="investhryApp.investor.mouapplicable">Mouapplicable</span></dt>
+        <dd>
+            <span>{{vm.investor.mouapplicable}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.investor.mousignyear">Mousignyear</span></dt>
+        <dd>
+            <span>{{vm.investor.mousignyear}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.investor.moudocument">Moudocument</span></dt>
+        <dd>
+            <div ng-if="vm.investor.moudocument">
+                <a ng-click="vm.openFile(vm.investor.moudocumentContentType, vm.investor.moudocument)" data-translate="entity.action.open">open</a>
+                {{vm.investor.moudocumentContentType}}, {{vm.byteSize(vm.investor.moudocument)}}
+            </div>
+        </dd>
+        <dt><span data-translate="investhryApp.investor.mouidnumber">Mouidnumber</span></dt>
+        <dd>
+            <span>{{vm.investor.mouidnumber}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.investor.investorphoto">Investorphoto</span></dt>
+        <dd>
+            <div ng-if="vm.investor.investorphoto">
+                <a ng-click="vm.openFile(vm.investor.investorphotoContentType, vm.investor.investorphoto)">
+                    <img data-ng-src="{{'data:' + vm.investor.investorphotoContentType + ';base64,' + vm.investor.investorphoto}}" style="max-width: 100%;" alt="investor image"/>
+                </a>
+                {{vm.investor.investorphotoContentType}}, {{vm.byteSize(vm.investor.investorphoto)}}
+            </div>
+        </dd>
+        <dt><span data-translate="investhryApp.investor.inv_f_name">Inv F Name</span></dt>
+        <dd>
+            <span>{{vm.investor.inv_f_name}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.investor.inv_m_name">Inv M Name</span></dt>
+        <dd>
+            <span>{{vm.investor.inv_m_name}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.investor.inv_l_name">Inv L Name</span></dt>
+        <dd>
+            <span>{{vm.investor.inv_l_name}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.investor.invaddress1">Invaddress 1</span></dt>
+        <dd>
+            <span>{{vm.investor.invaddress1}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.investor.invaddress2">Invaddress 2</span></dt>
+        <dd>
+            <span>{{vm.investor.invaddress2}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.investor.invaddress3">Invaddress 3</span></dt>
+        <dd>
+            <span>{{vm.investor.invaddress3}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.investor.phone">Phone</span></dt>
+        <dd>
+            <span>{{vm.investor.phone}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.investor.mobile">Mobile</span></dt>
+        <dd>
+            <span>{{vm.investor.mobile}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.investor.fax">Fax</span></dt>
+        <dd>
+            <span>{{vm.investor.fax}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.investor.emailprimary">Emailprimary</span></dt>
+        <dd>
+            <span>{{vm.investor.emailprimary}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.investor.emailsecondary">Emailsecondary</span></dt>
+        <dd>
+            <span>{{vm.investor.emailsecondary}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.investor.country">Country</span></dt>
+        <dd>
+            <span>{{vm.investor.country}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.investor.state">State</span></dt>
+        <dd>
+            <span>{{vm.investor.state}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.investor.city">City</span></dt>
+        <dd>
+            <span>{{vm.investor.city}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="investor-detail.edit({id:vm.investor.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

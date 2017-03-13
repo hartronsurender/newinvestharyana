@@ -1,0 +1,100 @@
+<div>
+    <h2 data-translate="investhryApp.project_electricity_detail.home.title">Project Electricity Details</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="project-electricity-detail.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="investhryApp.project_electricity_detail.home.createLabel">
+                        Create new Project Electricity Detail
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.projectid">Projectid</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.temporaryconnection">Temporaryconnection</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.load_required">Load Required</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.existing_connecton">Existing Connecton</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.account_number">Account Number</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.load_demand">Load Demand</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.load_demand_kva">Load Demand Kva</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.new_load_demand_kw">New Load Demand Kw</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.new_load_demand_kva">New Load Demand Kva</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.load_demand_date">Load Demand Date</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.regular_connection">Regular Connection</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.regular_load_required">Regular Load Required</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.regular_existing_connection">Regular Existing Connection</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.regular_uhbvn_dhbvn_customer_type">Regular Uhbvn Dhbvn Customer Type</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.regular_account_number">Regular Account Number</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.regular_load_if_any_kw">Regular Load If Any Kw</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.regular_existing_load_kva">Regular Existing Load Kva</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.regular_new_load_demand_kw">Regular New Load Demand Kw</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.regular_new_load_demand_kva">Regular New Load Demand Kva</span></th>
+                    <th><span data-translate="investhryApp.project_electricity_detail.regular_demand_date">Regular Demand Date</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="project_electricity_detail in vm.project_electricity_details track by project_electricity_detail.id">
+                    <td><a ui-sref="project-electricity-detail-detail({id:project_electricity_detail.id})">{{project_electricity_detail.id}}</a></td>
+                    <td>{{project_electricity_detail.projectid}}</td>
+                    <td>
+                        <a ng-if="project_electricity_detail.temporaryconnection" ng-click="vm.openFile(project_electricity_detail.temporaryconnectionContentType, project_electricity_detail.temporaryconnection)" data-translate="entity.action.open">open</a>
+                        <span ng-if="project_electricity_detail.temporaryconnection">{{project_electricity_detail.temporaryconnectionContentType}}, {{vm.byteSize(project_electricity_detail.temporaryconnection)}}</span>
+                    </td>
+                    <td>{{project_electricity_detail.load_required}}</td>
+                    <td>{{project_electricity_detail.existing_connecton}}</td>
+                    <td>{{project_electricity_detail.account_number}}</td>
+                    <td>{{project_electricity_detail.load_demand}}</td>
+                    <td>{{project_electricity_detail.load_demand_kva}}</td>
+                    <td>{{project_electricity_detail.new_load_demand_kw}}</td>
+                    <td>{{project_electricity_detail.new_load_demand_kva}}</td>
+                    <td>{{project_electricity_detail.load_demand_date | date:'medium'}}</td>
+                    <td>
+                        <a ng-if="project_electricity_detail.regular_connection" ng-click="vm.openFile(project_electricity_detail.regular_connectionContentType, project_electricity_detail.regular_connection)" data-translate="entity.action.open">open</a>
+                        <span ng-if="project_electricity_detail.regular_connection">{{project_electricity_detail.regular_connectionContentType}}, {{vm.byteSize(project_electricity_detail.regular_connection)}}</span>
+                    </td>
+                    <td>{{project_electricity_detail.regular_load_required}}</td>
+                    <td>{{project_electricity_detail.regular_existing_connection}}</td>
+                    <td>{{project_electricity_detail.regular_uhbvn_dhbvn_customer_type}}</td>
+                    <td>{{project_electricity_detail.regular_account_number}}</td>
+                    <td>{{project_electricity_detail.regular_load_if_any_kw}}</td>
+                    <td>{{project_electricity_detail.regular_existing_load_kva}}</td>
+                    <td>{{project_electricity_detail.regular_new_load_demand_kw}}</td>
+                    <td>{{project_electricity_detail.regular_new_load_demand_kva}}</td>
+                    <td>{{project_electricity_detail.regular_demand_date | date:'medium'}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="project-electricity-detail-detail({id:project_electricity_detail.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="project-electricity-detail.edit({id:project_electricity_detail.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="project-electricity-detail.delete({id:project_electricity_detail.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

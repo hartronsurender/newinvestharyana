@@ -1,0 +1,89 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "mouapplicable",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "mousignyear",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "moudocument",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "mouidnumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "investorphoto",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "image"
+        },
+        {
+            "fieldName": "inv_f_name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "inv_m_name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "inv_l_name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "invaddress1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "invaddress2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "invaddress3",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "mobile",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "fax",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "emailprimary",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "emailsecondary",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "country",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "UUID"
+        }
+    ],
+    "changelogDate": "20170313044106",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "investor",
+    "pagination": "no"
+}

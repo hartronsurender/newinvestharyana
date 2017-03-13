@@ -1,0 +1,186 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myProject_electricity_detailLabel" data-translate="investhryApp.project_electricity_detail.home.createOrEditLabel">Create or edit a Project Electricity Detail</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.project_electricity_detail.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.project_electricity_detail.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.projectid" for="field_projectid">Projectid</label>
+            <input type="text" class="form-control" name="projectid" id="field_projectid"
+                    ng-model="vm.project_electricity_detail.projectid"
+                    />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setTemporaryconnection($file, vm.project_electricity_detail)">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.temporaryconnection" for="field_temporaryconnection">Temporaryconnection</label>
+            <div>
+                <div ng-if="vm.project_electricity_detail.temporaryconnection" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.project_electricity_detail.temporaryconnectionContentType, vm.project_electricity_detail.temporaryconnection)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.project_electricity_detail.temporaryconnectionContentType}}, {{vm.byteSize(vm.project_electricity_detail.temporaryconnection)}}</span>
+                    <button type="button" ng-click="vm.project_electricity_detail.temporaryconnection=null;vm.project_electricity_detail.temporaryconnectionContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setTemporaryconnection($file, vm.project_electricity_detail)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="temporaryconnection" id="field_temporaryconnection"
+                    ng-model="vm.project_electricity_detail.temporaryconnection"
+                    />
+            <input type="hidden" class="form-control" name="temporaryconnectionContentType" id="field_temporaryconnectionContentType"
+                    ng-model="vm.project_electricity_detail.temporaryconnectionContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.load_required" for="field_load_required">Load Required</label>
+            <input type="checkbox" class="form-control" name="load_required" id="field_load_required"
+                    ng-model="vm.project_electricity_detail.load_required"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.existing_connecton" for="field_existing_connecton">Existing Connecton</label>
+            <input type="checkbox" class="form-control" name="existing_connecton" id="field_existing_connecton"
+                    ng-model="vm.project_electricity_detail.existing_connecton"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.account_number" for="field_account_number">Account Number</label>
+            <input type="text" class="form-control" name="account_number" id="field_account_number"
+                    ng-model="vm.project_electricity_detail.account_number"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.load_demand" for="field_load_demand">Load Demand</label>
+            <input type="number" class="form-control" name="load_demand" id="field_load_demand"
+                    ng-model="vm.project_electricity_detail.load_demand"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.load_demand_kva" for="field_load_demand_kva">Load Demand Kva</label>
+            <input type="number" class="form-control" name="load_demand_kva" id="field_load_demand_kva"
+                    ng-model="vm.project_electricity_detail.load_demand_kva"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.new_load_demand_kw" for="field_new_load_demand_kw">New Load Demand Kw</label>
+            <input type="number" class="form-control" name="new_load_demand_kw" id="field_new_load_demand_kw"
+                    ng-model="vm.project_electricity_detail.new_load_demand_kw"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.new_load_demand_kva" for="field_new_load_demand_kva">New Load Demand Kva</label>
+            <input type="number" class="form-control" name="new_load_demand_kva" id="field_new_load_demand_kva"
+                    ng-model="vm.project_electricity_detail.new_load_demand_kva"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.load_demand_date" for="field_load_demand_date">Load Demand Date</label>
+                <div class="input-group">
+                    <input id="field_load_demand_date" type="text" class="form-control" name="load_demand_date" datetime-picker="{{dateformat}}" ng-model="vm.project_electricity_detail.load_demand_date" is-open="vm.datePickerOpenStatus.load_demand_date"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('load_demand_date')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setRegular_connection($file, vm.project_electricity_detail)">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.regular_connection" for="field_regular_connection">Regular Connection</label>
+            <div>
+                <div ng-if="vm.project_electricity_detail.regular_connection" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.project_electricity_detail.regular_connectionContentType, vm.project_electricity_detail.regular_connection)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.project_electricity_detail.regular_connectionContentType}}, {{vm.byteSize(vm.project_electricity_detail.regular_connection)}}</span>
+                    <button type="button" ng-click="vm.project_electricity_detail.regular_connection=null;vm.project_electricity_detail.regular_connectionContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setRegular_connection($file, vm.project_electricity_detail)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="regular_connection" id="field_regular_connection"
+                    ng-model="vm.project_electricity_detail.regular_connection"
+                    />
+            <input type="hidden" class="form-control" name="regular_connectionContentType" id="field_regular_connectionContentType"
+                    ng-model="vm.project_electricity_detail.regular_connectionContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.regular_load_required" for="field_regular_load_required">Regular Load Required</label>
+            <input type="checkbox" class="form-control" name="regular_load_required" id="field_regular_load_required"
+                    ng-model="vm.project_electricity_detail.regular_load_required"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.regular_existing_connection" for="field_regular_existing_connection">Regular Existing Connection</label>
+            <input type="checkbox" class="form-control" name="regular_existing_connection" id="field_regular_existing_connection"
+                    ng-model="vm.project_electricity_detail.regular_existing_connection"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.regular_uhbvn_dhbvn_customer_type" for="field_regular_uhbvn_dhbvn_customer_type">Regular Uhbvn Dhbvn Customer Type</label>
+            <input type="text" class="form-control" name="regular_uhbvn_dhbvn_customer_type" id="field_regular_uhbvn_dhbvn_customer_type"
+                    ng-model="vm.project_electricity_detail.regular_uhbvn_dhbvn_customer_type"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.regular_account_number" for="field_regular_account_number">Regular Account Number</label>
+            <input type="text" class="form-control" name="regular_account_number" id="field_regular_account_number"
+                    ng-model="vm.project_electricity_detail.regular_account_number"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.regular_load_if_any_kw" for="field_regular_load_if_any_kw">Regular Load If Any Kw</label>
+            <input type="number" class="form-control" name="regular_load_if_any_kw" id="field_regular_load_if_any_kw"
+                    ng-model="vm.project_electricity_detail.regular_load_if_any_kw"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.regular_existing_load_kva" for="field_regular_existing_load_kva">Regular Existing Load Kva</label>
+            <input type="number" class="form-control" name="regular_existing_load_kva" id="field_regular_existing_load_kva"
+                    ng-model="vm.project_electricity_detail.regular_existing_load_kva"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.regular_new_load_demand_kw" for="field_regular_new_load_demand_kw">Regular New Load Demand Kw</label>
+            <input type="number" class="form-control" name="regular_new_load_demand_kw" id="field_regular_new_load_demand_kw"
+                    ng-model="vm.project_electricity_detail.regular_new_load_demand_kw"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.regular_new_load_demand_kva" for="field_regular_new_load_demand_kva">Regular New Load Demand Kva</label>
+            <input type="number" class="form-control" name="regular_new_load_demand_kva" id="field_regular_new_load_demand_kva"
+                    ng-model="vm.project_electricity_detail.regular_new_load_demand_kva"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.project_electricity_detail.regular_demand_date" for="field_regular_demand_date">Regular Demand Date</label>
+                <div class="input-group">
+                    <input id="field_regular_demand_date" type="text" class="form-control" name="regular_demand_date" datetime-picker="{{dateformat}}" ng-model="vm.project_electricity_detail.regular_demand_date" is-open="vm.datePickerOpenStatus.regular_demand_date"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('regular_demand_date')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

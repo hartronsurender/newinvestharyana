@@ -1,0 +1,111 @@
+<div>
+    <h2 data-translate="investhryApp.companydetail.home.title">Companydetails</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="companydetail.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="investhryApp.companydetail.home.createLabel">
+                        Create new Companydetail
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="investhryApp.companydetail.investorid">Investorid</span></th>
+                    <th><span data-translate="investhryApp.companydetail.promoter_md_director">Promoter Md Director</span></th>
+                    <th><span data-translate="investhryApp.companydetail.designation">Designation</span></th>
+                    <th><span data-translate="investhryApp.companydetail.businessentity">Businessentity</span></th>
+                    <th><span data-translate="investhryApp.companydetail.businesstype">Businesstype</span></th>
+                    <th><span data-translate="investhryApp.companydetail.number_of_director_mds_ceo">Number Of Director Mds Ceo</span></th>
+                    <th><span data-translate="investhryApp.companydetail.list_director_md_ceo">List Director Md Ceo</span></th>
+                    <th><span data-translate="investhryApp.companydetail.pannumber">Pannumber</span></th>
+                    <th><span data-translate="investhryApp.companydetail.pancard">Pancard</span></th>
+                    <th><span data-translate="investhryApp.companydetail.aadharnumber">Aadharnumber</span></th>
+                    <th><span data-translate="investhryApp.companydetail.aadharcard">Aadharcard</span></th>
+                    <th><span data-translate="investhryApp.companydetail.nri">Nri</span></th>
+                    <th><span data-translate="investhryApp.companydetail.tin_vat_no">Tin Vat No</span></th>
+                    <th><span data-translate="investhryApp.companydetail.tin_vat_document">Tin Vat Document</span></th>
+                    <th><span data-translate="investhryApp.companydetail.cstno">Cstno</span></th>
+                    <th><span data-translate="investhryApp.companydetail.cstdocument">Cstdocument</span></th>
+                    <th><span data-translate="investhryApp.companydetail.moa_partnershipdeed_document">Moa Partnershipdeed Document</span></th>
+                    <th><span data-translate="investhryApp.companydetail.registration_document">Registration Document</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="companydetail in vm.companydetails track by companydetail.id">
+                    <td><a ui-sref="companydetail-detail({id:companydetail.id})">{{companydetail.id}}</a></td>
+                    <td>{{companydetail.investorid}}</td>
+                    <td>{{companydetail.promoter_md_director}}</td>
+                    <td>{{companydetail.designation}}</td>
+                    <td>{{companydetail.businessentity}}</td>
+                    <td>{{companydetail.businesstype}}</td>
+                    <td>{{companydetail.number_of_director_mds_ceo}}</td>
+                    <td>
+                        <a ng-if="companydetail.list_director_md_ceo" ng-click="vm.openFile(companydetail.list_director_md_ceoContentType, companydetail.list_director_md_ceo)" data-translate="entity.action.open">open</a>
+                        <span ng-if="companydetail.list_director_md_ceo">{{companydetail.list_director_md_ceoContentType}}, {{vm.byteSize(companydetail.list_director_md_ceo)}}</span>
+                    </td>
+                    <td>{{companydetail.pannumber}}</td>
+                    <td>
+                        <a ng-if="companydetail.pancard" ng-click="vm.openFile(companydetail.pancardContentType, companydetail.pancard)" data-translate="entity.action.open">open</a>
+                        <span ng-if="companydetail.pancard">{{companydetail.pancardContentType}}, {{vm.byteSize(companydetail.pancard)}}</span>
+                    </td>
+                    <td>{{companydetail.aadharnumber}}</td>
+                    <td>
+                        <a ng-if="companydetail.aadharcard" ng-click="vm.openFile(companydetail.aadharcardContentType, companydetail.aadharcard)" data-translate="entity.action.open">open</a>
+                        <span ng-if="companydetail.aadharcard">{{companydetail.aadharcardContentType}}, {{vm.byteSize(companydetail.aadharcard)}}</span>
+                    </td>
+                    <td>{{companydetail.nri}}</td>
+                    <td>{{companydetail.tin_vat_no}}</td>
+                    <td>
+                        <a ng-if="companydetail.tin_vat_document" ng-click="vm.openFile(companydetail.tin_vat_documentContentType, companydetail.tin_vat_document)" data-translate="entity.action.open">open</a>
+                        <span ng-if="companydetail.tin_vat_document">{{companydetail.tin_vat_documentContentType}}, {{vm.byteSize(companydetail.tin_vat_document)}}</span>
+                    </td>
+                    <td>{{companydetail.cstno}}</td>
+                    <td>
+                        <a ng-if="companydetail.cstdocument" ng-click="vm.openFile(companydetail.cstdocumentContentType, companydetail.cstdocument)" data-translate="entity.action.open">open</a>
+                        <span ng-if="companydetail.cstdocument">{{companydetail.cstdocumentContentType}}, {{vm.byteSize(companydetail.cstdocument)}}</span>
+                    </td>
+                    <td>
+                        <a ng-if="companydetail.moa_partnershipdeed_document" ng-click="vm.openFile(companydetail.moa_partnershipdeed_documentContentType, companydetail.moa_partnershipdeed_document)" data-translate="entity.action.open">open</a>
+                        <span ng-if="companydetail.moa_partnershipdeed_document">{{companydetail.moa_partnershipdeed_documentContentType}}, {{vm.byteSize(companydetail.moa_partnershipdeed_document)}}</span>
+                    </td>
+                    <td>
+                        <a ng-if="companydetail.registration_document" ng-click="vm.openFile(companydetail.registration_documentContentType, companydetail.registration_document)" data-translate="entity.action.open">open</a>
+                        <span ng-if="companydetail.registration_document">{{companydetail.registration_documentContentType}}, {{vm.byteSize(companydetail.registration_document)}}</span>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="companydetail-detail({id:companydetail.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="companydetail.edit({id:companydetail.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="companydetail.delete({id:companydetail.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

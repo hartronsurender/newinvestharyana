@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "manufactur_unit" : {
+            "home": {
+                "title": "Manufactur Units",
+                "createLabel": "Create a new Manufactur Unit",
+                "createOrEditLabel": "Create or edit a Manufactur Unit"
+            },
+            "created": "A new Manufactur Unit is created with identifier {{ param }}",
+            "updated": "A Manufactur Unit is updated with identifier {{ param }}",
+            "deleted": "A Manufactur Unit is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Manufactur Unit {{ id }}?"
+            },
+            "detail": {
+                "title": "Manufactur Unit"
+            },
+            "unit_type": "Unit Type"
+        }
+    }
+}

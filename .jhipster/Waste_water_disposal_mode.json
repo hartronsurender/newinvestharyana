@@ -1,0 +1,15 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "disposal_mode",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170313073935",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "waste_water_disposal_mode",
+    "pagination": "no"
+}

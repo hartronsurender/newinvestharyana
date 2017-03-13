@@ -1,0 +1,23 @@
+{
+    "investhryApp": {
+        "projectprocess_flowsteps" : {
+            "home": {
+                "title": "Projectprocess Flowsteps",
+                "createLabel": "Create a new Projectprocess Flowsteps",
+                "createOrEditLabel": "Create or edit a Projectprocess Flowsteps"
+            },
+            "created": "A new Projectprocess Flowsteps is created with identifier {{ param }}",
+            "updated": "A Projectprocess Flowsteps is updated with identifier {{ param }}",
+            "deleted": "A Projectprocess Flowsteps is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Projectprocess Flowsteps {{ id }}?"
+            },
+            "detail": {
+                "title": "Projectprocess Flowsteps"
+            },
+            "projectid": "Projectid",
+            "process_flow_document": "Process Flow Document",
+            "steps": "Steps"
+        }
+    }
+}

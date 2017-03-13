@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "connectingroad" : {
+            "home": {
+                "title": "Connectingroads",
+                "createLabel": "Create a new Connectingroad",
+                "createOrEditLabel": "Create or edit a Connectingroad"
+            },
+            "created": "A new Connectingroad is created with identifier {{ param }}",
+            "updated": "A Connectingroad is updated with identifier {{ param }}",
+            "deleted": "A Connectingroad is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Connectingroad {{ id }}?"
+            },
+            "detail": {
+                "title": "Connectingroad"
+            },
+            "connectingroadtype": "Connectingroadtype"
+        }
+    }
+}

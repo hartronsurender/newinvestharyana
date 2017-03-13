@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "projectcategory" : {
+            "home": {
+                "title": "Projectcategories",
+                "createLabel": "Create a new Projectcategory",
+                "createOrEditLabel": "Create or edit a Projectcategory"
+            },
+            "created": "A new Projectcategory is created with identifier {{ param }}",
+            "updated": "A Projectcategory is updated with identifier {{ param }}",
+            "deleted": "A Projectcategory is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Projectcategory {{ id }}?"
+            },
+            "detail": {
+                "title": "Projectcategory"
+            },
+            "projectcategoryname": "Projectcategoryname"
+        }
+    }
+}

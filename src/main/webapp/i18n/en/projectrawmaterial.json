@@ -1,0 +1,24 @@
+{
+    "investhryApp": {
+        "projectrawmaterial" : {
+            "home": {
+                "title": "Projectrawmaterials",
+                "createLabel": "Create a new Projectrawmaterial",
+                "createOrEditLabel": "Create or edit a Projectrawmaterial"
+            },
+            "created": "A new Projectrawmaterial is created with identifier {{ param }}",
+            "updated": "A Projectrawmaterial is updated with identifier {{ param }}",
+            "deleted": "A Projectrawmaterial is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Projectrawmaterial {{ id }}?"
+            },
+            "detail": {
+                "title": "Projectrawmaterial"
+            },
+            "projectid": "Projectid",
+            "raw_material": "Raw Material",
+            "raw_quantity": "Raw Quantity",
+            "raw_unit": "Raw Unit"
+        }
+    }
+}

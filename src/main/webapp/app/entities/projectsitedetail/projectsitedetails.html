@@ -1,0 +1,123 @@
+<div>
+    <h2 data-translate="investhryApp.projectsitedetail.home.title">Projectsitedetails</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="projectsitedetail.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="investhryApp.projectsitedetail.home.createLabel">
+                        Create new Projectsitedetail
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.projectid">Projectid</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.certifiedownership">Certifiedownership</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.ownership_document">Ownership Document</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.leaseapplicable">Leaseapplicable</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.lease_document">Lease Document</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.landagreementapplicable">Landagreementapplicable</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.landagreement_document">Landagreement Document</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.siteplan_document">Siteplan Document</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.locationplan_document">Locationplan Document</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.linearstripplan_document">Linearstripplan Document</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.connectingroadid">Connectingroadid</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.intersection_distance">Intersection Distance</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.railway_distance">Railway Distance</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.confirmity_landuse">Confirmity Landuse</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.landzone_usetype">Landzone Usetype</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.sitesituated_document">Sitesituated Document</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.building_existed">Building Existed</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.existing_building_applicable">Existing Building Applicable</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.building_plan_document">Building Plan Document</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.sitesituatedincontrolledarea">Sitesituatedincontrolledarea</span></th>
+                    <th><span data-translate="investhryApp.projectsitedetail.controlled_area_document">Controlled Area Document</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="projectsitedetail in vm.projectsitedetails track by projectsitedetail.id">
+                    <td><a ui-sref="projectsitedetail-detail({id:projectsitedetail.id})">{{projectsitedetail.id}}</a></td>
+                    <td>{{projectsitedetail.projectid}}</td>
+                    <td>{{projectsitedetail.certifiedownership}}</td>
+                    <td>
+                        <a ng-if="projectsitedetail.ownership_document" ng-click="vm.openFile(projectsitedetail.ownership_documentContentType, projectsitedetail.ownership_document)" data-translate="entity.action.open">open</a>
+                        <span ng-if="projectsitedetail.ownership_document">{{projectsitedetail.ownership_documentContentType}}, {{vm.byteSize(projectsitedetail.ownership_document)}}</span>
+                    </td>
+                    <td>{{projectsitedetail.leaseapplicable}}</td>
+                    <td>
+                        <a ng-if="projectsitedetail.lease_document" ng-click="vm.openFile(projectsitedetail.lease_documentContentType, projectsitedetail.lease_document)" data-translate="entity.action.open">open</a>
+                        <span ng-if="projectsitedetail.lease_document">{{projectsitedetail.lease_documentContentType}}, {{vm.byteSize(projectsitedetail.lease_document)}}</span>
+                    </td>
+                    <td>{{projectsitedetail.landagreementapplicable}}</td>
+                    <td>
+                        <a ng-if="projectsitedetail.landagreement_document" ng-click="vm.openFile(projectsitedetail.landagreement_documentContentType, projectsitedetail.landagreement_document)" data-translate="entity.action.open">open</a>
+                        <span ng-if="projectsitedetail.landagreement_document">{{projectsitedetail.landagreement_documentContentType}}, {{vm.byteSize(projectsitedetail.landagreement_document)}}</span>
+                    </td>
+                    <td>
+                        <a ng-if="projectsitedetail.siteplan_document" ng-click="vm.openFile(projectsitedetail.siteplan_documentContentType, projectsitedetail.siteplan_document)" data-translate="entity.action.open">open</a>
+                        <span ng-if="projectsitedetail.siteplan_document">{{projectsitedetail.siteplan_documentContentType}}, {{vm.byteSize(projectsitedetail.siteplan_document)}}</span>
+                    </td>
+                    <td>
+                        <a ng-if="projectsitedetail.locationplan_document" ng-click="vm.openFile(projectsitedetail.locationplan_documentContentType, projectsitedetail.locationplan_document)" data-translate="entity.action.open">open</a>
+                        <span ng-if="projectsitedetail.locationplan_document">{{projectsitedetail.locationplan_documentContentType}}, {{vm.byteSize(projectsitedetail.locationplan_document)}}</span>
+                    </td>
+                    <td>
+                        <a ng-if="projectsitedetail.linearstripplan_document" ng-click="vm.openFile(projectsitedetail.linearstripplan_documentContentType, projectsitedetail.linearstripplan_document)" data-translate="entity.action.open">open</a>
+                        <span ng-if="projectsitedetail.linearstripplan_document">{{projectsitedetail.linearstripplan_documentContentType}}, {{vm.byteSize(projectsitedetail.linearstripplan_document)}}</span>
+                    </td>
+                    <td>{{projectsitedetail.connectingroadid}}</td>
+                    <td>{{projectsitedetail.intersection_distance}}</td>
+                    <td>{{projectsitedetail.railway_distance}}</td>
+                    <td>{{projectsitedetail.confirmity_landuse}}</td>
+                    <td>{{projectsitedetail.landzone_usetype}}</td>
+                    <td>
+                        <a ng-if="projectsitedetail.sitesituated_document" ng-click="vm.openFile(projectsitedetail.sitesituated_documentContentType, projectsitedetail.sitesituated_document)" data-translate="entity.action.open">open</a>
+                        <span ng-if="projectsitedetail.sitesituated_document">{{projectsitedetail.sitesituated_documentContentType}}, {{vm.byteSize(projectsitedetail.sitesituated_document)}}</span>
+                    </td>
+                    <td>{{projectsitedetail.building_existed}}</td>
+                    <td>{{projectsitedetail.existing_building_applicable}}</td>
+                    <td>
+                        <a ng-if="projectsitedetail.building_plan_document" ng-click="vm.openFile(projectsitedetail.building_plan_documentContentType, projectsitedetail.building_plan_document)" data-translate="entity.action.open">open</a>
+                        <span ng-if="projectsitedetail.building_plan_document">{{projectsitedetail.building_plan_documentContentType}}, {{vm.byteSize(projectsitedetail.building_plan_document)}}</span>
+                    </td>
+                    <td>{{projectsitedetail.sitesituatedincontrolledarea}}</td>
+                    <td>
+                        <a ng-if="projectsitedetail.controlled_area_document" ng-click="vm.openFile(projectsitedetail.controlled_area_documentContentType, projectsitedetail.controlled_area_document)" data-translate="entity.action.open">open</a>
+                        <span ng-if="projectsitedetail.controlled_area_document">{{projectsitedetail.controlled_area_documentContentType}}, {{vm.byteSize(projectsitedetail.controlled_area_document)}}</span>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="projectsitedetail-detail({id:projectsitedetail.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="projectsitedetail.edit({id:projectsitedetail.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="projectsitedetail.delete({id:projectsitedetail.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

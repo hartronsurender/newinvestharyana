@@ -1,0 +1,64 @@
+<div>
+    <h2 data-translate="investhryApp.city_town_village.home.title">City Town Villages</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="city-town-village.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="investhryApp.city_town_village.home.createLabel">
+                        Create new City Town Village
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="investhryApp.city_town_village.stateid">Stateid</span></th>
+                    <th><span data-translate="investhryApp.city_town_village.districtid">Districtid</span></th>
+                    <th><span data-translate="investhryApp.city_town_village.blockid">Blockid</span></th>
+                    <th><span data-translate="investhryApp.city_town_village.city_town_village_name">City Town Village Name</span></th>
+                    <th><span data-translate="investhryApp.city_town_village.description">Description</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="city_town_village in vm.city_town_villages track by city_town_village.id">
+                    <td><a ui-sref="city-town-village-detail({id:city_town_village.id})">{{city_town_village.id}}</a></td>
+                    <td>{{city_town_village.stateid}}</td>
+                    <td>{{city_town_village.districtid}}</td>
+                    <td>{{city_town_village.blockid}}</td>
+                    <td>{{city_town_village.city_town_village_name}}</td>
+                    <td>{{city_town_village.description}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="city-town-village-detail({id:city_town_village.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="city-town-village.edit({id:city_town_village.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="city-town-village.delete({id:city_town_village.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

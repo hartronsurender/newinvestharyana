@@ -1,0 +1,50 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myTehsil_subtehsilLabel" data-translate="investhryApp.tehsil_subtehsil.home.createOrEditLabel">Create or edit a Tehsil Subtehsil</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.tehsil_subtehsil.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.tehsil_subtehsil.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.tehsil_subtehsil.districtid" for="field_districtid">Districtid</label>
+            <input type="text" class="form-control" name="districtid" id="field_districtid"
+                    ng-model="vm.tehsil_subtehsil.districtid"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.tehsil_subtehsil.blockid" for="field_blockid">Blockid</label>
+            <input type="text" class="form-control" name="blockid" id="field_blockid"
+                    ng-model="vm.tehsil_subtehsil.blockid"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.tehsil_subtehsil.city_town_villageid" for="field_city_town_villageid">City Town Villageid</label>
+            <input type="text" class="form-control" name="city_town_villageid" id="field_city_town_villageid"
+                    ng-model="vm.tehsil_subtehsil.city_town_villageid"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.tehsil_subtehsil.tehsilname" for="field_tehsilname">Tehsilname</label>
+            <input type="text" class="form-control" name="tehsilname" id="field_tehsilname"
+                    ng-model="vm.tehsil_subtehsil.tehsilname"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

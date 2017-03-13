@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "emission_fuel_type" : {
+            "home": {
+                "title": "Emission_fuel_types",
+                "createLabel": "नया Emission Fuel Type बनाएँ",
+                "createOrEditLabel": "Emission Fuel Type बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Emission Fuel Type [identifier: {{ param }}] तैयार है",
+            "updated": "एक Emission Fuel Type [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Emission Fuel Type [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Emission Fuel Type [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Emission Fuel Type"
+            },
+            "fuel_type": "Fuel Type"
+        }
+    }
+}

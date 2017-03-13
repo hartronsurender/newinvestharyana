@@ -1,0 +1,56 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myCity_town_villageLabel" data-translate="investhryApp.city_town_village.home.createOrEditLabel">Create or edit a City Town Village</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.city_town_village.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.city_town_village.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.city_town_village.stateid" for="field_stateid">Stateid</label>
+            <input type="text" class="form-control" name="stateid" id="field_stateid"
+                    ng-model="vm.city_town_village.stateid"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.city_town_village.districtid" for="field_districtid">Districtid</label>
+            <input type="text" class="form-control" name="districtid" id="field_districtid"
+                    ng-model="vm.city_town_village.districtid"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.city_town_village.blockid" for="field_blockid">Blockid</label>
+            <input type="text" class="form-control" name="blockid" id="field_blockid"
+                    ng-model="vm.city_town_village.blockid"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.city_town_village.city_town_village_name" for="field_city_town_village_name">City Town Village Name</label>
+            <input type="text" class="form-control" name="city_town_village_name" id="field_city_town_village_name"
+                    ng-model="vm.city_town_village.city_town_village_name"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.city_town_village.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.city_town_village.description"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

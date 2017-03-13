@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span data-translate="investhryApp.waste_water_detail.detail.title">Waste Water Detail</span> {{vm.waste_water_detail.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="investhryApp.waste_water_detail.projectid">Projectid</span></dt>
+        <dd>
+            <span>{{vm.waste_water_detail.projectid}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.waste_water_detail.source_of_generation">Source Of Generation</span></dt>
+        <dd>
+            <span>{{vm.waste_water_detail.source_of_generation}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.waste_water_detail.nature_type">Nature Type</span></dt>
+        <dd>
+            <span>{{vm.waste_water_detail.nature_type}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.waste_water_detail.quantity">Quantity</span></dt>
+        <dd>
+            <span>{{vm.waste_water_detail.quantity}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.waste_water_detail.mode_of_disposal">Mode Of Disposal</span></dt>
+        <dd>
+            <span>{{vm.waste_water_detail.mode_of_disposal}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="waste-water-detail-detail.edit({id:vm.waste_water_detail.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

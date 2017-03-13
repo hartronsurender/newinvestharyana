@@ -1,0 +1,64 @@
+<div>
+    <h2 data-translate="investhryApp.projectphase.home.title">Projectphases</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="projectphase.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="investhryApp.projectphase.home.createLabel">
+                        Create new Projectphase
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="investhryApp.projectphase.projectid">Projectid</span></th>
+                    <th><span data-translate="investhryApp.projectphase.fciphase">Fciphase</span></th>
+                    <th><span data-translate="investhryApp.projectphase.fci_product_category">Fci Product Category</span></th>
+                    <th><span data-translate="investhryApp.projectphase.fci">Fci</span></th>
+                    <th><span data-translate="investhryApp.projectphase.fic_implementation_date">Fic Implementation Date</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="projectphase in vm.projectphases track by projectphase.id">
+                    <td><a ui-sref="projectphase-detail({id:projectphase.id})">{{projectphase.id}}</a></td>
+                    <td>{{projectphase.projectid}}</td>
+                    <td>{{projectphase.fciphase}}</td>
+                    <td>{{projectphase.fci_product_category}}</td>
+                    <td>{{projectphase.fci}}</td>
+                    <td>{{projectphase.fic_implementation_date | date:'medium'}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="projectphase-detail({id:projectphase.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="projectphase.edit({id:projectphase.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="projectphase.delete({id:projectphase.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

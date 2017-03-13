@@ -1,0 +1,24 @@
+{
+    "investhryApp": {
+        "tehsil_subtehsil" : {
+            "home": {
+                "title": "Tehsil Subtehsils",
+                "createLabel": "Create a new Tehsil Subtehsil",
+                "createOrEditLabel": "Create or edit a Tehsil Subtehsil"
+            },
+            "created": "A new Tehsil Subtehsil is created with identifier {{ param }}",
+            "updated": "A Tehsil Subtehsil is updated with identifier {{ param }}",
+            "deleted": "A Tehsil Subtehsil is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Tehsil Subtehsil {{ id }}?"
+            },
+            "detail": {
+                "title": "Tehsil Subtehsil"
+            },
+            "districtid": "Districtid",
+            "blockid": "Blockid",
+            "city_town_villageid": "City Town Villageid",
+            "tehsilname": "Tehsilname"
+        }
+    }
+}

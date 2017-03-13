@@ -1,0 +1,24 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "projectid",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "process_flow_document",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "steps",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170313070237",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "projectprocess_flowsteps",
+    "pagination": "no"
+}

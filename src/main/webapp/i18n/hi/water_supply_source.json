@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "water_supply_source" : {
+            "home": {
+                "title": "Water_supply_sources",
+                "createLabel": "नया Water Supply Source बनाएँ",
+                "createOrEditLabel": "Water Supply Source बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Water Supply Source [identifier: {{ param }}] तैयार है",
+            "updated": "एक Water Supply Source [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Water Supply Source [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Water Supply Source [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Water Supply Source"
+            },
+            "source_type": "Source Type"
+        }
+    }
+}

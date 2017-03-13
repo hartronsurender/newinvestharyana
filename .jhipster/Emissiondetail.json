@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "projectid",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "particulars",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "capacity",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "type_of_fuel",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "air_pollution_control_device",
+            "fieldType": "UUID"
+        }
+    ],
+    "changelogDate": "20170313070557",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "emissiondetail",
+    "pagination": "no"
+}

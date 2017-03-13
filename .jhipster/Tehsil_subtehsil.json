@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "districtid",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "blockid",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "city_town_villageid",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "tehsilname",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170313075003",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "tehsil_subtehsil",
+    "pagination": "no"
+}

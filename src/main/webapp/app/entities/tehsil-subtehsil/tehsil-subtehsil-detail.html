@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="investhryApp.tehsil_subtehsil.detail.title">Tehsil Subtehsil</span> {{vm.tehsil_subtehsil.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="investhryApp.tehsil_subtehsil.districtid">Districtid</span></dt>
+        <dd>
+            <span>{{vm.tehsil_subtehsil.districtid}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.tehsil_subtehsil.blockid">Blockid</span></dt>
+        <dd>
+            <span>{{vm.tehsil_subtehsil.blockid}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.tehsil_subtehsil.city_town_villageid">City Town Villageid</span></dt>
+        <dd>
+            <span>{{vm.tehsil_subtehsil.city_town_villageid}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.tehsil_subtehsil.tehsilname">Tehsilname</span></dt>
+        <dd>
+            <span>{{vm.tehsil_subtehsil.tehsilname}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tehsil-subtehsil-detail.edit({id:vm.tehsil_subtehsil.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

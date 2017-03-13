@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "industrysize" : {
+            "home": {
+                "title": "Industrysizes",
+                "createLabel": "नया Industrysize बनाएँ",
+                "createOrEditLabel": "Industrysize बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Industrysize [identifier: {{ param }}] तैयार है",
+            "updated": "एक Industrysize [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Industrysize [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Industrysize [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Industrysize"
+            },
+            "size_of_industry": "Size Of Industry"
+        }
+    }
+}

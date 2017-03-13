@@ -1,0 +1,23 @@
+
+<div>
+    <h2><span data-translate="investhryApp.projecttype.detail.title">Projecttype</span> {{vm.projecttype.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="investhryApp.projecttype.projecttype_name">Projecttype Name</span></dt>
+        <dd>
+            <span>{{vm.projecttype.projecttype_name}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="projecttype-detail.edit({id:vm.projecttype.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

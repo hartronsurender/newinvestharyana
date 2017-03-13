@@ -1,0 +1,172 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myInvestorLabel" data-translate="investhryApp.investor.home.createOrEditLabel">Create or edit a Investor</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.investor.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.investor.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.investor.mouapplicable" for="field_mouapplicable">Mouapplicable</label>
+            <input type="checkbox" class="form-control" name="mouapplicable" id="field_mouapplicable"
+                    ng-model="vm.investor.mouapplicable"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.investor.mousignyear" for="field_mousignyear">Mousignyear</label>
+            <input type="number" class="form-control" name="mousignyear" id="field_mousignyear"
+                    ng-model="vm.investor.mousignyear"
+                    />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setMoudocument($file, vm.investor)">
+            <label class="control-label" data-translate="investhryApp.investor.moudocument" for="field_moudocument">Moudocument</label>
+            <div>
+                <div ng-if="vm.investor.moudocument" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.investor.moudocumentContentType, vm.investor.moudocument)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.investor.moudocumentContentType}}, {{vm.byteSize(vm.investor.moudocument)}}</span>
+                    <button type="button" ng-click="vm.investor.moudocument=null;vm.investor.moudocumentContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setMoudocument($file, vm.investor)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="moudocument" id="field_moudocument"
+                    ng-model="vm.investor.moudocument"
+                    />
+            <input type="hidden" class="form-control" name="moudocumentContentType" id="field_moudocumentContentType"
+                    ng-model="vm.investor.moudocumentContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.investor.mouidnumber" for="field_mouidnumber">Mouidnumber</label>
+            <input type="text" class="form-control" name="mouidnumber" id="field_mouidnumber"
+                    ng-model="vm.investor.mouidnumber"
+                    />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setInvestorphoto($file, vm.investor)" ngf-pattern="'image/*'">
+            <label class="control-label" data-translate="investhryApp.investor.investorphoto" for="field_investorphoto">Investorphoto</label>
+            <div>
+                <img data-ng-src="{{'data:' + vm.investor.investorphotoContentType + ';base64,' + vm.investor.investorphoto}}" style="max-height: 100px;" ng-if="vm.investor.investorphoto" alt="investor image"/>
+                <div ng-if="vm.investor.investorphoto" class="help-block clearfix">
+                    <span class="pull-left">{{vm.investor.investorphotoContentType}}, {{vm.byteSize(vm.investor.investorphoto)}}</span>
+                    <button type="button" ng-click="vm.investor.investorphoto=null;vm.investor.investorphotoContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setInvestorphoto($file, vm.investor)" accept="image/*" data-translate="entity.action.addimage">
+                    Add image
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="investorphoto" id="field_investorphoto"
+                    ng-model="vm.investor.investorphoto"
+                    />
+            <input type="hidden" class="form-control" name="investorphotoContentType" id="field_investorphotoContentType"
+                    ng-model="vm.investor.investorphotoContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.investor.inv_f_name" for="field_inv_f_name">Inv F Name</label>
+            <input type="text" class="form-control" name="inv_f_name" id="field_inv_f_name"
+                    ng-model="vm.investor.inv_f_name"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.investor.inv_m_name" for="field_inv_m_name">Inv M Name</label>
+            <input type="text" class="form-control" name="inv_m_name" id="field_inv_m_name"
+                    ng-model="vm.investor.inv_m_name"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.investor.inv_l_name" for="field_inv_l_name">Inv L Name</label>
+            <input type="text" class="form-control" name="inv_l_name" id="field_inv_l_name"
+                    ng-model="vm.investor.inv_l_name"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.investor.invaddress1" for="field_invaddress1">Invaddress 1</label>
+            <input type="text" class="form-control" name="invaddress1" id="field_invaddress1"
+                    ng-model="vm.investor.invaddress1"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.investor.invaddress2" for="field_invaddress2">Invaddress 2</label>
+            <input type="text" class="form-control" name="invaddress2" id="field_invaddress2"
+                    ng-model="vm.investor.invaddress2"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.investor.invaddress3" for="field_invaddress3">Invaddress 3</label>
+            <input type="text" class="form-control" name="invaddress3" id="field_invaddress3"
+                    ng-model="vm.investor.invaddress3"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.investor.phone" for="field_phone">Phone</label>
+            <input type="number" class="form-control" name="phone" id="field_phone"
+                    ng-model="vm.investor.phone"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.investor.mobile" for="field_mobile">Mobile</label>
+            <input type="number" class="form-control" name="mobile" id="field_mobile"
+                    ng-model="vm.investor.mobile"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.investor.fax" for="field_fax">Fax</label>
+            <input type="number" class="form-control" name="fax" id="field_fax"
+                    ng-model="vm.investor.fax"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.investor.emailprimary" for="field_emailprimary">Emailprimary</label>
+            <input type="text" class="form-control" name="emailprimary" id="field_emailprimary"
+                    ng-model="vm.investor.emailprimary"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.investor.emailsecondary" for="field_emailsecondary">Emailsecondary</label>
+            <input type="text" class="form-control" name="emailsecondary" id="field_emailsecondary"
+                    ng-model="vm.investor.emailsecondary"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.investor.country" for="field_country">Country</label>
+            <input type="text" class="form-control" name="country" id="field_country"
+                    ng-model="vm.investor.country"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.investor.state" for="field_state">State</label>
+            <input type="text" class="form-control" name="state" id="field_state"
+                    ng-model="vm.investor.state"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.investor.city" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                    ng-model="vm.investor.city"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

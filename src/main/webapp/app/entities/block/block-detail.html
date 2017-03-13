@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="investhryApp.block.detail.title">Block</span> {{vm.block.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="investhryApp.block.stateid">Stateid</span></dt>
+        <dd>
+            <span>{{vm.block.stateid}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.block.districtid">Districtid</span></dt>
+        <dd>
+            <span>{{vm.block.districtid}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.block.blockname">Blockname</span></dt>
+        <dd>
+            <span>{{vm.block.blockname}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="block-detail.edit({id:vm.block.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

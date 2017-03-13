@@ -1,0 +1,60 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myProjectprocess_flowstepsLabel" data-translate="investhryApp.projectprocess_flowsteps.home.createOrEditLabel">Create or edit a Projectprocess Flowsteps</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.projectprocess_flowsteps.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.projectprocess_flowsteps.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectprocess_flowsteps.projectid" for="field_projectid">Projectid</label>
+            <input type="text" class="form-control" name="projectid" id="field_projectid"
+                    ng-model="vm.projectprocess_flowsteps.projectid"
+                    />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setProcess_flow_document($file, vm.projectprocess_flowsteps)">
+            <label class="control-label" data-translate="investhryApp.projectprocess_flowsteps.process_flow_document" for="field_process_flow_document">Process Flow Document</label>
+            <div>
+                <div ng-if="vm.projectprocess_flowsteps.process_flow_document" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.projectprocess_flowsteps.process_flow_documentContentType, vm.projectprocess_flowsteps.process_flow_document)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.projectprocess_flowsteps.process_flow_documentContentType}}, {{vm.byteSize(vm.projectprocess_flowsteps.process_flow_document)}}</span>
+                    <button type="button" ng-click="vm.projectprocess_flowsteps.process_flow_document=null;vm.projectprocess_flowsteps.process_flow_documentContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setProcess_flow_document($file, vm.projectprocess_flowsteps)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="process_flow_document" id="field_process_flow_document"
+                    ng-model="vm.projectprocess_flowsteps.process_flow_document"
+                    />
+            <input type="hidden" class="form-control" name="process_flow_documentContentType" id="field_process_flow_documentContentType"
+                    ng-model="vm.projectprocess_flowsteps.process_flow_documentContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectprocess_flowsteps.steps" for="field_steps">Steps</label>
+            <input type="text" class="form-control" name="steps" id="field_steps"
+                    ng-model="vm.projectprocess_flowsteps.steps"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

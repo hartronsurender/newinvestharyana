@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "electric_load_type" : {
+            "home": {
+                "title": "Electric Load Types",
+                "createLabel": "Create a new Electric Load Type",
+                "createOrEditLabel": "Create or edit a Electric Load Type"
+            },
+            "created": "A new Electric Load Type is created with identifier {{ param }}",
+            "updated": "A Electric Load Type is updated with identifier {{ param }}",
+            "deleted": "A Electric Load Type is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Electric Load Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Electric Load Type"
+            },
+            "regular_uhbvn_dhbvn_customer_type_name": "Regular Uhbvn Dhbvn Customer Type Name"
+        }
+    }
+}

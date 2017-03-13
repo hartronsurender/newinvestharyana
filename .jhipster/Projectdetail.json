@@ -1,0 +1,175 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "siteaddress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "district",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "block",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "city_town_village",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "tehsil_subtehsil",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "multyvillageinvolved",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "villageinvolved",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "falls_in_aravalli",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "landprocured",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "allotedbyhsiidc",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "estate",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cluster",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phase",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sector",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "plotno",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hadbastno",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "khasradocument",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "lies_under_mc",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "distance_from_mc",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "located_in_urban",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "revenue_shajra_document",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "jamabandi_document",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "nonencumbrancecertificate",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "totalproposedprojectarea",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "proposed_build_up_area",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "secotr",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "projectpurpose",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "size_of_industry",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "project_type",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "nic_code",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "category_of_project",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "collaboration_with_foreign",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "detail_project_report",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "existing_regulatory_approval",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "approval_application_form",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "approval_document",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "any",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "edc_sif_clu_fee_paid_applicable",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "edc_sif_clu_fee_document",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "propose_employeement",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170313060138",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "projectdetail",
+    "pagination": "no"
+}

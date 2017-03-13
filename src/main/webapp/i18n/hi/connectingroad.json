@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "connectingroad" : {
+            "home": {
+                "title": "Connectingroads",
+                "createLabel": "नया Connectingroad बनाएँ",
+                "createOrEditLabel": "Connectingroad बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Connectingroad [identifier: {{ param }}] तैयार है",
+            "updated": "एक Connectingroad [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Connectingroad [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Connectingroad [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Connectingroad"
+            },
+            "connectingroadtype": "Connectingroadtype"
+        }
+    }
+}

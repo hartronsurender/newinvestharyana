@@ -1,0 +1,105 @@
+
+<div>
+    <h2><span data-translate="investhryApp.project_electricity_detail.detail.title">Project Electricity Detail</span> {{vm.project_electricity_detail.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="investhryApp.project_electricity_detail.projectid">Projectid</span></dt>
+        <dd>
+            <span>{{vm.project_electricity_detail.projectid}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.project_electricity_detail.temporaryconnection">Temporaryconnection</span></dt>
+        <dd>
+            <div ng-if="vm.project_electricity_detail.temporaryconnection">
+                <a ng-click="vm.openFile(vm.project_electricity_detail.temporaryconnectionContentType, vm.project_electricity_detail.temporaryconnection)" data-translate="entity.action.open">open</a>
+                {{vm.project_electricity_detail.temporaryconnectionContentType}}, {{vm.byteSize(vm.project_electricity_detail.temporaryconnection)}}
+            </div>
+        </dd>
+        <dt><span data-translate="investhryApp.project_electricity_detail.load_required">Load Required</span></dt>
+        <dd>
+            <span>{{vm.project_electricity_detail.load_required}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.project_electricity_detail.existing_connecton">Existing Connecton</span></dt>
+        <dd>
+            <span>{{vm.project_electricity_detail.existing_connecton}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.project_electricity_detail.account_number">Account Number</span></dt>
+        <dd>
+            <span>{{vm.project_electricity_detail.account_number}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.project_electricity_detail.load_demand">Load Demand</span></dt>
+        <dd>
+            <span>{{vm.project_electricity_detail.load_demand}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.project_electricity_detail.load_demand_kva">Load Demand Kva</span></dt>
+        <dd>
+            <span>{{vm.project_electricity_detail.load_demand_kva}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.project_electricity_detail.new_load_demand_kw">New Load Demand Kw</span></dt>
+        <dd>
+            <span>{{vm.project_electricity_detail.new_load_demand_kw}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.project_electricity_detail.new_load_demand_kva">New Load Demand Kva</span></dt>
+        <dd>
+            <span>{{vm.project_electricity_detail.new_load_demand_kva}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.project_electricity_detail.load_demand_date">Load Demand Date</span></dt>
+        <dd>
+            <span>{{vm.project_electricity_detail.load_demand_date | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.project_electricity_detail.regular_connection">Regular Connection</span></dt>
+        <dd>
+            <div ng-if="vm.project_electricity_detail.regular_connection">
+                <a ng-click="vm.openFile(vm.project_electricity_detail.regular_connectionContentType, vm.project_electricity_detail.regular_connection)" data-translate="entity.action.open">open</a>
+                {{vm.project_electricity_detail.regular_connectionContentType}}, {{vm.byteSize(vm.project_electricity_detail.regular_connection)}}
+            </div>
+        </dd>
+        <dt><span data-translate="investhryApp.project_electricity_detail.regular_load_required">Regular Load Required</span></dt>
+        <dd>
+            <span>{{vm.project_electricity_detail.regular_load_required}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.project_electricity_detail.regular_existing_connection">Regular Existing Connection</span></dt>
+        <dd>
+            <span>{{vm.project_electricity_detail.regular_existing_connection}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.project_electricity_detail.regular_uhbvn_dhbvn_customer_type">Regular Uhbvn Dhbvn Customer Type</span></dt>
+        <dd>
+            <span>{{vm.project_electricity_detail.regular_uhbvn_dhbvn_customer_type}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.project_electricity_detail.regular_account_number">Regular Account Number</span></dt>
+        <dd>
+            <span>{{vm.project_electricity_detail.regular_account_number}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.project_electricity_detail.regular_load_if_any_kw">Regular Load If Any Kw</span></dt>
+        <dd>
+            <span>{{vm.project_electricity_detail.regular_load_if_any_kw}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.project_electricity_detail.regular_existing_load_kva">Regular Existing Load Kva</span></dt>
+        <dd>
+            <span>{{vm.project_electricity_detail.regular_existing_load_kva}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.project_electricity_detail.regular_new_load_demand_kw">Regular New Load Demand Kw</span></dt>
+        <dd>
+            <span>{{vm.project_electricity_detail.regular_new_load_demand_kw}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.project_electricity_detail.regular_new_load_demand_kva">Regular New Load Demand Kva</span></dt>
+        <dd>
+            <span>{{vm.project_electricity_detail.regular_new_load_demand_kva}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.project_electricity_detail.regular_demand_date">Regular Demand Date</span></dt>
+        <dd>
+            <span>{{vm.project_electricity_detail.regular_demand_date | date:'medium'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="project-electricity-detail-detail.edit({id:vm.project_electricity_detail.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

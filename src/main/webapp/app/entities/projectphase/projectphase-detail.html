@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span data-translate="investhryApp.projectphase.detail.title">Projectphase</span> {{vm.projectphase.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="investhryApp.projectphase.projectid">Projectid</span></dt>
+        <dd>
+            <span>{{vm.projectphase.projectid}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectphase.fciphase">Fciphase</span></dt>
+        <dd>
+            <span>{{vm.projectphase.fciphase}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectphase.fci_product_category">Fci Product Category</span></dt>
+        <dd>
+            <span>{{vm.projectphase.fci_product_category}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectphase.fci">Fci</span></dt>
+        <dd>
+            <span>{{vm.projectphase.fci}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectphase.fic_implementation_date">Fic Implementation Date</span></dt>
+        <dd>
+            <span>{{vm.projectphase.fic_implementation_date | date:'medium'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="projectphase-detail.edit({id:vm.projectphase.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

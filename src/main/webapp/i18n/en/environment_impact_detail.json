@@ -1,0 +1,35 @@
+{
+    "investhryApp": {
+        "environment_impact_detail" : {
+            "home": {
+                "title": "Environment Impact Details",
+                "createLabel": "Create a new Environment Impact Detail",
+                "createOrEditLabel": "Create or edit a Environment Impact Detail"
+            },
+            "created": "A new Environment Impact Detail is created with identifier {{ param }}",
+            "updated": "A Environment Impact Detail is updated with identifier {{ param }}",
+            "deleted": "A Environment Impact Detail is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Environment Impact Detail {{ id }}?"
+            },
+            "detail": {
+                "title": "Environment Impact Detail"
+            },
+            "projectid": "Projectid",
+            "water_supply_source": "Water Supply Source",
+            "water_usage_process": "Water Usage Process",
+            "water_usage_cooling": "Water Usage Cooling",
+            "water_usage_domestic": "Water Usage Domestic",
+            "water_usage_other": "Water Usage Other",
+            "water_waste_process": "Water Waste Process",
+            "water_waste_cooling": "Water Waste Cooling",
+            "water_waste_domesting": "Water Waste Domesting",
+            "water_waste_other": "Water Waste Other",
+            "waste_water_treatment": "Waste Water Treatment",
+            "waste_water_treatment_document": "Waste Water Treatment Document",
+            "mode_of_disposal": "Mode Of Disposal",
+            "emissionid": "Emissionid",
+            "water_waste_id": "Water Waste Id"
+        }
+    }
+}

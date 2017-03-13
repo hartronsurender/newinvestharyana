@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "waste_water_nature" : {
+            "home": {
+                "title": "Waste_water_natures",
+                "createLabel": "नया Waste Water Nature बनाएँ",
+                "createOrEditLabel": "Waste Water Nature बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Waste Water Nature [identifier: {{ param }}] तैयार है",
+            "updated": "एक Waste Water Nature [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Waste Water Nature [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Waste Water Nature [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Waste Water Nature"
+            },
+            "waste_water_nature_type": "Waste Water Nature Type"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "emission_air_pollution" : {
+            "home": {
+                "title": "Emission_air_pollutions",
+                "createLabel": "नया Emission Air Pollution बनाएँ",
+                "createOrEditLabel": "Emission Air Pollution बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Emission Air Pollution [identifier: {{ param }}] तैयार है",
+            "updated": "एक Emission Air Pollution [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Emission Air Pollution [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Emission Air Pollution [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Emission Air Pollution"
+            },
+            "pollution_controll_device": "Pollution Controll Device"
+        }
+    }
+}

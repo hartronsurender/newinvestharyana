@@ -1,0 +1,104 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "projectid",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "certifiedownership",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "ownership_document",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "leaseapplicable",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "lease_document",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "landagreementapplicable",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "landagreement_document",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "siteplan_document",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "locationplan_document",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "linearstripplan_document",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "connectingroadid",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "intersection_distance",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "railway_distance",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "confirmity_landuse",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "landzone_usetype",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "sitesituated_document",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "building_existed",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "existing_building_applicable",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "building_plan_document",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "sitesituatedincontrolledarea",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "controlled_area_document",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "any"
+        }
+    ],
+    "changelogDate": "20170313060554",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "projectsitedetail",
+    "pagination": "no"
+}

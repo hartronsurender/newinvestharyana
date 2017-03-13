@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "landzoneclassification" : {
+            "home": {
+                "title": "Landzoneclassifications",
+                "createLabel": "Create a new Landzoneclassification",
+                "createOrEditLabel": "Create or edit a Landzoneclassification"
+            },
+            "created": "A new Landzoneclassification is created with identifier {{ param }}",
+            "updated": "A Landzoneclassification is updated with identifier {{ param }}",
+            "deleted": "A Landzoneclassification is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Landzoneclassification {{ id }}?"
+            },
+            "detail": {
+                "title": "Landzoneclassification"
+            },
+            "land_zone_classification": "Land Zone Classification"
+        }
+    }
+}

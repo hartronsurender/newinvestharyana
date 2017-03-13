@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "emission_fuel_type" : {
+            "home": {
+                "title": "Emission Fuel Types",
+                "createLabel": "Create a new Emission Fuel Type",
+                "createOrEditLabel": "Create or edit a Emission Fuel Type"
+            },
+            "created": "A new Emission Fuel Type is created with identifier {{ param }}",
+            "updated": "A Emission Fuel Type is updated with identifier {{ param }}",
+            "deleted": "A Emission Fuel Type is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Emission Fuel Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Emission Fuel Type"
+            },
+            "fuel_type": "Fuel Type"
+        }
+    }
+}

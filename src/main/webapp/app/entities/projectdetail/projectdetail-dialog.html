@@ -1,0 +1,372 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myProjectdetailLabel" data-translate="investhryApp.projectdetail.home.createOrEditLabel">Create or edit a Projectdetail</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.projectdetail.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.projectdetail.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.siteaddress" for="field_siteaddress">Siteaddress</label>
+            <input type="text" class="form-control" name="siteaddress" id="field_siteaddress"
+                    ng-model="vm.projectdetail.siteaddress"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.district" for="field_district">District</label>
+            <input type="text" class="form-control" name="district" id="field_district"
+                    ng-model="vm.projectdetail.district"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.block" for="field_block">Block</label>
+            <input type="text" class="form-control" name="block" id="field_block"
+                    ng-model="vm.projectdetail.block"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.city_town_village" for="field_city_town_village">City Town Village</label>
+            <input type="text" class="form-control" name="city_town_village" id="field_city_town_village"
+                    ng-model="vm.projectdetail.city_town_village"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.tehsil_subtehsil" for="field_tehsil_subtehsil">Tehsil Subtehsil</label>
+            <input type="text" class="form-control" name="tehsil_subtehsil" id="field_tehsil_subtehsil"
+                    ng-model="vm.projectdetail.tehsil_subtehsil"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.multyvillageinvolved" for="field_multyvillageinvolved">Multyvillageinvolved</label>
+            <input type="checkbox" class="form-control" name="multyvillageinvolved" id="field_multyvillageinvolved"
+                    ng-model="vm.projectdetail.multyvillageinvolved"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.villageinvolved" for="field_villageinvolved">Villageinvolved</label>
+            <input type="text" class="form-control" name="villageinvolved" id="field_villageinvolved"
+                    ng-model="vm.projectdetail.villageinvolved"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.falls_in_aravalli" for="field_falls_in_aravalli">Falls In Aravalli</label>
+            <input type="checkbox" class="form-control" name="falls_in_aravalli" id="field_falls_in_aravalli"
+                    ng-model="vm.projectdetail.falls_in_aravalli"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.landprocured" for="field_landprocured">Landprocured</label>
+            <input type="checkbox" class="form-control" name="landprocured" id="field_landprocured"
+                    ng-model="vm.projectdetail.landprocured"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.allotedbyhsiidc" for="field_allotedbyhsiidc">Allotedbyhsiidc</label>
+            <input type="checkbox" class="form-control" name="allotedbyhsiidc" id="field_allotedbyhsiidc"
+                    ng-model="vm.projectdetail.allotedbyhsiidc"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.estate" for="field_estate">Estate</label>
+            <input type="text" class="form-control" name="estate" id="field_estate"
+                    ng-model="vm.projectdetail.estate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.cluster" for="field_cluster">Cluster</label>
+            <input type="text" class="form-control" name="cluster" id="field_cluster"
+                    ng-model="vm.projectdetail.cluster"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.phase" for="field_phase">Phase</label>
+            <input type="text" class="form-control" name="phase" id="field_phase"
+                    ng-model="vm.projectdetail.phase"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.sector" for="field_sector">Sector</label>
+            <input type="text" class="form-control" name="sector" id="field_sector"
+                    ng-model="vm.projectdetail.sector"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.plotno" for="field_plotno">Plotno</label>
+            <input type="text" class="form-control" name="plotno" id="field_plotno"
+                    ng-model="vm.projectdetail.plotno"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.hadbastno" for="field_hadbastno">Hadbastno</label>
+            <input type="text" class="form-control" name="hadbastno" id="field_hadbastno"
+                    ng-model="vm.projectdetail.hadbastno"
+                    />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setKhasradocument($file, vm.projectdetail)">
+            <label class="control-label" data-translate="investhryApp.projectdetail.khasradocument" for="field_khasradocument">Khasradocument</label>
+            <div>
+                <div ng-if="vm.projectdetail.khasradocument" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.projectdetail.khasradocumentContentType, vm.projectdetail.khasradocument)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.projectdetail.khasradocumentContentType}}, {{vm.byteSize(vm.projectdetail.khasradocument)}}</span>
+                    <button type="button" ng-click="vm.projectdetail.khasradocument=null;vm.projectdetail.khasradocumentContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setKhasradocument($file, vm.projectdetail)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="khasradocument" id="field_khasradocument"
+                    ng-model="vm.projectdetail.khasradocument"
+                    />
+            <input type="hidden" class="form-control" name="khasradocumentContentType" id="field_khasradocumentContentType"
+                    ng-model="vm.projectdetail.khasradocumentContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.lies_under_mc" for="field_lies_under_mc">Lies Under Mc</label>
+            <input type="checkbox" class="form-control" name="lies_under_mc" id="field_lies_under_mc"
+                    ng-model="vm.projectdetail.lies_under_mc"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.distance_from_mc" for="field_distance_from_mc">Distance From Mc</label>
+            <input type="number" class="form-control" name="distance_from_mc" id="field_distance_from_mc"
+                    ng-model="vm.projectdetail.distance_from_mc"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.located_in_urban" for="field_located_in_urban">Located In Urban</label>
+            <input type="checkbox" class="form-control" name="located_in_urban" id="field_located_in_urban"
+                    ng-model="vm.projectdetail.located_in_urban"
+                    />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setRevenue_shajra_document($file, vm.projectdetail)">
+            <label class="control-label" data-translate="investhryApp.projectdetail.revenue_shajra_document" for="field_revenue_shajra_document">Revenue Shajra Document</label>
+            <div>
+                <div ng-if="vm.projectdetail.revenue_shajra_document" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.projectdetail.revenue_shajra_documentContentType, vm.projectdetail.revenue_shajra_document)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.projectdetail.revenue_shajra_documentContentType}}, {{vm.byteSize(vm.projectdetail.revenue_shajra_document)}}</span>
+                    <button type="button" ng-click="vm.projectdetail.revenue_shajra_document=null;vm.projectdetail.revenue_shajra_documentContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setRevenue_shajra_document($file, vm.projectdetail)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="revenue_shajra_document" id="field_revenue_shajra_document"
+                    ng-model="vm.projectdetail.revenue_shajra_document"
+                    />
+            <input type="hidden" class="form-control" name="revenue_shajra_documentContentType" id="field_revenue_shajra_documentContentType"
+                    ng-model="vm.projectdetail.revenue_shajra_documentContentType" />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setJamabandi_document($file, vm.projectdetail)">
+            <label class="control-label" data-translate="investhryApp.projectdetail.jamabandi_document" for="field_jamabandi_document">Jamabandi Document</label>
+            <div>
+                <div ng-if="vm.projectdetail.jamabandi_document" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.projectdetail.jamabandi_documentContentType, vm.projectdetail.jamabandi_document)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.projectdetail.jamabandi_documentContentType}}, {{vm.byteSize(vm.projectdetail.jamabandi_document)}}</span>
+                    <button type="button" ng-click="vm.projectdetail.jamabandi_document=null;vm.projectdetail.jamabandi_documentContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setJamabandi_document($file, vm.projectdetail)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="jamabandi_document" id="field_jamabandi_document"
+                    ng-model="vm.projectdetail.jamabandi_document"
+                    />
+            <input type="hidden" class="form-control" name="jamabandi_documentContentType" id="field_jamabandi_documentContentType"
+                    ng-model="vm.projectdetail.jamabandi_documentContentType" />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setNonencumbrancecertificate($file, vm.projectdetail)">
+            <label class="control-label" data-translate="investhryApp.projectdetail.nonencumbrancecertificate" for="field_nonencumbrancecertificate">Nonencumbrancecertificate</label>
+            <div>
+                <div ng-if="vm.projectdetail.nonencumbrancecertificate" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.projectdetail.nonencumbrancecertificateContentType, vm.projectdetail.nonencumbrancecertificate)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.projectdetail.nonencumbrancecertificateContentType}}, {{vm.byteSize(vm.projectdetail.nonencumbrancecertificate)}}</span>
+                    <button type="button" ng-click="vm.projectdetail.nonencumbrancecertificate=null;vm.projectdetail.nonencumbrancecertificateContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setNonencumbrancecertificate($file, vm.projectdetail)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="nonencumbrancecertificate" id="field_nonencumbrancecertificate"
+                    ng-model="vm.projectdetail.nonencumbrancecertificate"
+                    />
+            <input type="hidden" class="form-control" name="nonencumbrancecertificateContentType" id="field_nonencumbrancecertificateContentType"
+                    ng-model="vm.projectdetail.nonencumbrancecertificateContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.totalproposedprojectarea" for="field_totalproposedprojectarea">Totalproposedprojectarea</label>
+            <input type="number" class="form-control" name="totalproposedprojectarea" id="field_totalproposedprojectarea"
+                    ng-model="vm.projectdetail.totalproposedprojectarea"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.proposed_build_up_area" for="field_proposed_build_up_area">Proposed Build Up Area</label>
+            <input type="number" class="form-control" name="proposed_build_up_area" id="field_proposed_build_up_area"
+                    ng-model="vm.projectdetail.proposed_build_up_area"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.secotr" for="field_secotr">Secotr</label>
+            <input type="text" class="form-control" name="secotr" id="field_secotr"
+                    ng-model="vm.projectdetail.secotr"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.projectpurpose" for="field_projectpurpose">Projectpurpose</label>
+            <input type="text" class="form-control" name="projectpurpose" id="field_projectpurpose"
+                    ng-model="vm.projectdetail.projectpurpose"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.size_of_industry" for="field_size_of_industry">Size Of Industry</label>
+            <input type="text" class="form-control" name="size_of_industry" id="field_size_of_industry"
+                    ng-model="vm.projectdetail.size_of_industry"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.project_type" for="field_project_type">Project Type</label>
+            <input type="text" class="form-control" name="project_type" id="field_project_type"
+                    ng-model="vm.projectdetail.project_type"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.nic_code" for="field_nic_code">Nic Code</label>
+            <input type="text" class="form-control" name="nic_code" id="field_nic_code"
+                    ng-model="vm.projectdetail.nic_code"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.category_of_project" for="field_category_of_project">Category Of Project</label>
+            <input type="text" class="form-control" name="category_of_project" id="field_category_of_project"
+                    ng-model="vm.projectdetail.category_of_project"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.collaboration_with_foreign" for="field_collaboration_with_foreign">Collaboration With Foreign</label>
+            <input type="text" class="form-control" name="collaboration_with_foreign" id="field_collaboration_with_foreign"
+                    ng-model="vm.projectdetail.collaboration_with_foreign"
+                    />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setDetail_project_report($file, vm.projectdetail)">
+            <label class="control-label" data-translate="investhryApp.projectdetail.detail_project_report" for="field_detail_project_report">Detail Project Report</label>
+            <div>
+                <div ng-if="vm.projectdetail.detail_project_report" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.projectdetail.detail_project_reportContentType, vm.projectdetail.detail_project_report)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.projectdetail.detail_project_reportContentType}}, {{vm.byteSize(vm.projectdetail.detail_project_report)}}</span>
+                    <button type="button" ng-click="vm.projectdetail.detail_project_report=null;vm.projectdetail.detail_project_reportContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setDetail_project_report($file, vm.projectdetail)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="detail_project_report" id="field_detail_project_report"
+                    ng-model="vm.projectdetail.detail_project_report"
+                    />
+            <input type="hidden" class="form-control" name="detail_project_reportContentType" id="field_detail_project_reportContentType"
+                    ng-model="vm.projectdetail.detail_project_reportContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.existing_regulatory_approval" for="field_existing_regulatory_approval">Existing Regulatory Approval</label>
+            <input type="checkbox" class="form-control" name="existing_regulatory_approval" id="field_existing_regulatory_approval"
+                    ng-model="vm.projectdetail.existing_regulatory_approval"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.approval_application_form" for="field_approval_application_form">Approval Application Form</label>
+            <input type="text" class="form-control" name="approval_application_form" id="field_approval_application_form"
+                    ng-model="vm.projectdetail.approval_application_form"
+                    />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setApproval_document($file, vm.projectdetail)">
+            <label class="control-label" data-translate="investhryApp.projectdetail.approval_document" for="field_approval_document">Approval Document</label>
+            <div>
+                <div ng-if="vm.projectdetail.approval_document" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.projectdetail.approval_documentContentType, vm.projectdetail.approval_document)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.projectdetail.approval_documentContentType}}, {{vm.byteSize(vm.projectdetail.approval_document)}}</span>
+                    <button type="button" ng-click="vm.projectdetail.approval_document=null;vm.projectdetail.approval_documentContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setApproval_document($file, vm.projectdetail)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="approval_document" id="field_approval_document"
+                    ng-model="vm.projectdetail.approval_document"
+                    />
+            <input type="hidden" class="form-control" name="approval_documentContentType" id="field_approval_documentContentType"
+                    ng-model="vm.projectdetail.approval_documentContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.edc_sif_clu_fee_paid_applicable" for="field_edc_sif_clu_fee_paid_applicable">Edc Sif Clu Fee Paid Applicable</label>
+            <input type="checkbox" class="form-control" name="edc_sif_clu_fee_paid_applicable" id="field_edc_sif_clu_fee_paid_applicable"
+                    ng-model="vm.projectdetail.edc_sif_clu_fee_paid_applicable"
+                    />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setEdc_sif_clu_fee_document($file, vm.projectdetail)">
+            <label class="control-label" data-translate="investhryApp.projectdetail.edc_sif_clu_fee_document" for="field_edc_sif_clu_fee_document">Edc Sif Clu Fee Document</label>
+            <div>
+                <div ng-if="vm.projectdetail.edc_sif_clu_fee_document" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.projectdetail.edc_sif_clu_fee_documentContentType, vm.projectdetail.edc_sif_clu_fee_document)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.projectdetail.edc_sif_clu_fee_documentContentType}}, {{vm.byteSize(vm.projectdetail.edc_sif_clu_fee_document)}}</span>
+                    <button type="button" ng-click="vm.projectdetail.edc_sif_clu_fee_document=null;vm.projectdetail.edc_sif_clu_fee_documentContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setEdc_sif_clu_fee_document($file, vm.projectdetail)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="edc_sif_clu_fee_document" id="field_edc_sif_clu_fee_document"
+                    ng-model="vm.projectdetail.edc_sif_clu_fee_document"
+                    />
+            <input type="hidden" class="form-control" name="edc_sif_clu_fee_documentContentType" id="field_edc_sif_clu_fee_documentContentType"
+                    ng-model="vm.projectdetail.edc_sif_clu_fee_documentContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectdetail.propose_employeement" for="field_propose_employeement">Propose Employeement</label>
+            <input type="number" class="form-control" name="propose_employeement" id="field_propose_employeement"
+                    ng-model="vm.projectdetail.propose_employeement"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

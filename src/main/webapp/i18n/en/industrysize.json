@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "industrysize" : {
+            "home": {
+                "title": "Industrysizes",
+                "createLabel": "Create a new Industrysize",
+                "createOrEditLabel": "Create or edit a Industrysize"
+            },
+            "created": "A new Industrysize is created with identifier {{ param }}",
+            "updated": "A Industrysize is updated with identifier {{ param }}",
+            "deleted": "A Industrysize is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Industrysize {{ id }}?"
+            },
+            "detail": {
+                "title": "Industrysize"
+            },
+            "size_of_industry": "Size Of Industry"
+        }
+    }
+}

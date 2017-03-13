@@ -1,0 +1,41 @@
+{
+    "investhryApp": {
+        "projectsitedetail" : {
+            "home": {
+                "title": "Projectsitedetails",
+                "createLabel": "नया Projectsitedetail बनाएँ",
+                "createOrEditLabel": "Projectsitedetail बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Projectsitedetail [identifier: {{ param }}] तैयार है",
+            "updated": "एक Projectsitedetail [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Projectsitedetail [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Projectsitedetail [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Projectsitedetail"
+            },
+            "projectid": "Projectid",
+            "certifiedownership": "Certifiedownership",
+            "ownership_document": "Ownership Document",
+            "leaseapplicable": "Leaseapplicable",
+            "lease_document": "Lease Document",
+            "landagreementapplicable": "Landagreementapplicable",
+            "landagreement_document": "Landagreement Document",
+            "siteplan_document": "Siteplan Document",
+            "locationplan_document": "Locationplan Document",
+            "linearstripplan_document": "Linearstripplan Document",
+            "connectingroadid": "Connectingroadid",
+            "intersection_distance": "Intersection Distance",
+            "railway_distance": "Railway Distance",
+            "confirmity_landuse": "Confirmity Landuse",
+            "landzone_usetype": "Landzone Usetype",
+            "sitesituated_document": "Sitesituated Document",
+            "building_existed": "Building Existed",
+            "existing_building_applicable": "Existing Building Applicable",
+            "building_plan_document": "Building Plan Document",
+            "sitesituatedincontrolledarea": "Sitesituatedincontrolledarea",
+            "controlled_area_document": "Controlled Area Document"
+        }
+    }
+}

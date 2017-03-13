@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "projectid",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "fciphase",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fci_product_category",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fci",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fic_implementation_date",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20170313064923",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "projectphase",
+    "pagination": "no"
+}

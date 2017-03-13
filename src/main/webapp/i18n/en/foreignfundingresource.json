@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "foreignfundingresource" : {
+            "home": {
+                "title": "Foreignfundingresources",
+                "createLabel": "Create a new Foreignfundingresource",
+                "createOrEditLabel": "Create or edit a Foreignfundingresource"
+            },
+            "created": "A new Foreignfundingresource is created with identifier {{ param }}",
+            "updated": "A Foreignfundingresource is updated with identifier {{ param }}",
+            "deleted": "A Foreignfundingresource is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Foreignfundingresource {{ id }}?"
+            },
+            "detail": {
+                "title": "Foreignfundingresource"
+            },
+            "foreign_funding_resource_type": "Foreign Funding Resource Type"
+        }
+    }
+}

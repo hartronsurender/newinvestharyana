@@ -1,0 +1,87 @@
+<div>
+    <h2 data-translate="investhryApp.environment_impact_detail.home.title">Environment Impact Details</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="environment-impact-detail.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="investhryApp.environment_impact_detail.home.createLabel">
+                        Create new Environment Impact Detail
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="investhryApp.environment_impact_detail.projectid">Projectid</span></th>
+                    <th><span data-translate="investhryApp.environment_impact_detail.water_supply_source">Water Supply Source</span></th>
+                    <th><span data-translate="investhryApp.environment_impact_detail.water_usage_process">Water Usage Process</span></th>
+                    <th><span data-translate="investhryApp.environment_impact_detail.water_usage_cooling">Water Usage Cooling</span></th>
+                    <th><span data-translate="investhryApp.environment_impact_detail.water_usage_domestic">Water Usage Domestic</span></th>
+                    <th><span data-translate="investhryApp.environment_impact_detail.water_usage_other">Water Usage Other</span></th>
+                    <th><span data-translate="investhryApp.environment_impact_detail.water_waste_process">Water Waste Process</span></th>
+                    <th><span data-translate="investhryApp.environment_impact_detail.water_waste_cooling">Water Waste Cooling</span></th>
+                    <th><span data-translate="investhryApp.environment_impact_detail.water_waste_domesting">Water Waste Domesting</span></th>
+                    <th><span data-translate="investhryApp.environment_impact_detail.water_waste_other">Water Waste Other</span></th>
+                    <th><span data-translate="investhryApp.environment_impact_detail.waste_water_treatment">Waste Water Treatment</span></th>
+                    <th><span data-translate="investhryApp.environment_impact_detail.waste_water_treatment_document">Waste Water Treatment Document</span></th>
+                    <th><span data-translate="investhryApp.environment_impact_detail.mode_of_disposal">Mode Of Disposal</span></th>
+                    <th><span data-translate="investhryApp.environment_impact_detail.emissionid">Emissionid</span></th>
+                    <th><span data-translate="investhryApp.environment_impact_detail.water_waste_id">Water Waste Id</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="environment_impact_detail in vm.environment_impact_details track by environment_impact_detail.id">
+                    <td><a ui-sref="environment-impact-detail-detail({id:environment_impact_detail.id})">{{environment_impact_detail.id}}</a></td>
+                    <td>{{environment_impact_detail.projectid}}</td>
+                    <td>{{environment_impact_detail.water_supply_source}}</td>
+                    <td>{{environment_impact_detail.water_usage_process}}</td>
+                    <td>{{environment_impact_detail.water_usage_cooling}}</td>
+                    <td>{{environment_impact_detail.water_usage_domestic}}</td>
+                    <td>{{environment_impact_detail.water_usage_other}}</td>
+                    <td>{{environment_impact_detail.water_waste_process}}</td>
+                    <td>{{environment_impact_detail.water_waste_cooling}}</td>
+                    <td>{{environment_impact_detail.water_waste_domesting}}</td>
+                    <td>{{environment_impact_detail.water_waste_other}}</td>
+                    <td>{{environment_impact_detail.waste_water_treatment}}</td>
+                    <td>
+                        <a ng-if="environment_impact_detail.waste_water_treatment_document" ng-click="vm.openFile(environment_impact_detail.waste_water_treatment_documentContentType, environment_impact_detail.waste_water_treatment_document)" data-translate="entity.action.open">open</a>
+                        <span ng-if="environment_impact_detail.waste_water_treatment_document">{{environment_impact_detail.waste_water_treatment_documentContentType}}, {{vm.byteSize(environment_impact_detail.waste_water_treatment_document)}}</span>
+                    </td>
+                    <td>{{environment_impact_detail.mode_of_disposal}}</td>
+                    <td>{{environment_impact_detail.emissionid}}</td>
+                    <td>{{environment_impact_detail.water_waste_id}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="environment-impact-detail-detail({id:environment_impact_detail.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="environment-impact-detail.edit({id:environment_impact_detail.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="environment-impact-detail.delete({id:environment_impact_detail.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

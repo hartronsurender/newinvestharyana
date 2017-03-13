@@ -1,0 +1,32 @@
+{
+    "investhryApp": {
+        "financeinvestment" : {
+            "home": {
+                "title": "Financeinvestments",
+                "createLabel": "नया Financeinvestment बनाएँ",
+                "createOrEditLabel": "Financeinvestment बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Financeinvestment [identifier: {{ param }}] तैयार है",
+            "updated": "एक Financeinvestment [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Financeinvestment [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Financeinvestment [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Financeinvestment"
+            },
+            "projectid": "Projectid",
+            "land_cost": "Land Cost",
+            "building_cost": "Building Cost",
+            "plan_machinery_cost": "Plan Machinery Cost",
+            "misc_assets": "Misc Assets",
+            "totalproject_cost": "Totalproject Cost",
+            "fdi_applicable": "Fdi Applicable",
+            "fdi_country": "Fdi Country",
+            "fdi_value": "Fdi Value",
+            "fdi_resource": "Fdi Resource",
+            "project_construction_start_date": "Project Construction Start Date",
+            "project_commercial_activity_date": "Project Commercial Activity Date"
+        }
+    }
+}

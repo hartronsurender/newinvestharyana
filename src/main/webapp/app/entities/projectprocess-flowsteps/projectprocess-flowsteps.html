@@ -1,0 +1,63 @@
+<div>
+    <h2 data-translate="investhryApp.projectprocess_flowsteps.home.title">Projectprocess Flowsteps</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="projectprocess-flowsteps.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="investhryApp.projectprocess_flowsteps.home.createLabel">
+                        Create new Projectprocess Flowsteps
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="investhryApp.projectprocess_flowsteps.projectid">Projectid</span></th>
+                    <th><span data-translate="investhryApp.projectprocess_flowsteps.process_flow_document">Process Flow Document</span></th>
+                    <th><span data-translate="investhryApp.projectprocess_flowsteps.steps">Steps</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="projectprocess_flowsteps in vm.projectprocess_flowsteps track by projectprocess_flowsteps.id">
+                    <td><a ui-sref="projectprocess-flowsteps-detail({id:projectprocess_flowsteps.id})">{{projectprocess_flowsteps.id}}</a></td>
+                    <td>{{projectprocess_flowsteps.projectid}}</td>
+                    <td>
+                        <a ng-if="projectprocess_flowsteps.process_flow_document" ng-click="vm.openFile(projectprocess_flowsteps.process_flow_documentContentType, projectprocess_flowsteps.process_flow_document)" data-translate="entity.action.open">open</a>
+                        <span ng-if="projectprocess_flowsteps.process_flow_document">{{projectprocess_flowsteps.process_flow_documentContentType}}, {{vm.byteSize(projectprocess_flowsteps.process_flow_document)}}</span>
+                    </td>
+                    <td>{{projectprocess_flowsteps.steps}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="projectprocess-flowsteps-detail({id:projectprocess_flowsteps.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="projectprocess-flowsteps.edit({id:projectprocess_flowsteps.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="projectprocess-flowsteps.delete({id:projectprocess_flowsteps.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

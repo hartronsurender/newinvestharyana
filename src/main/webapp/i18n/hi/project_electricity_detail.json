@@ -1,0 +1,40 @@
+{
+    "investhryApp": {
+        "project_electricity_detail" : {
+            "home": {
+                "title": "Project_electricity_details",
+                "createLabel": "नया Project Electricity Detail बनाएँ",
+                "createOrEditLabel": "Project Electricity Detail बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Project Electricity Detail [identifier: {{ param }}] तैयार है",
+            "updated": "एक Project Electricity Detail [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Project Electricity Detail [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Project Electricity Detail [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Project Electricity Detail"
+            },
+            "projectid": "Projectid",
+            "temporaryconnection": "Temporaryconnection",
+            "load_required": "Load Required",
+            "existing_connecton": "Existing Connecton",
+            "account_number": "Account Number",
+            "load_demand": "Load Demand",
+            "load_demand_kva": "Load Demand Kva",
+            "new_load_demand_kw": "New Load Demand Kw",
+            "new_load_demand_kva": "New Load Demand Kva",
+            "load_demand_date": "Load Demand Date",
+            "regular_connection": "Regular Connection",
+            "regular_load_required": "Regular Load Required",
+            "regular_existing_connection": "Regular Existing Connection",
+            "regular_uhbvn_dhbvn_customer_type": "Regular Uhbvn Dhbvn Customer Type",
+            "regular_account_number": "Regular Account Number",
+            "regular_load_if_any_kw": "Regular Load If Any Kw",
+            "regular_existing_load_kva": "Regular Existing Load Kva",
+            "regular_new_load_demand_kw": "Regular New Load Demand Kw",
+            "regular_new_load_demand_kva": "Regular New Load Demand Kva",
+            "regular_demand_date": "Regular Demand Date"
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "investhryApp": {
+        "projectdetail" : {
+            "home": {
+                "title": "Projectdetails",
+                "createLabel": "Create a new Projectdetail",
+                "createOrEditLabel": "Create or edit a Projectdetail"
+            },
+            "created": "A new Projectdetail is created with identifier {{ param }}",
+            "updated": "A Projectdetail is updated with identifier {{ param }}",
+            "deleted": "A Projectdetail is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Projectdetail {{ id }}?"
+            },
+            "detail": {
+                "title": "Projectdetail"
+            },
+            "siteaddress": "Siteaddress",
+            "district": "District",
+            "block": "Block",
+            "city_town_village": "City Town Village",
+            "tehsil_subtehsil": "Tehsil Subtehsil",
+            "multyvillageinvolved": "Multyvillageinvolved",
+            "villageinvolved": "Villageinvolved",
+            "falls_in_aravalli": "Falls In Aravalli",
+            "landprocured": "Landprocured",
+            "allotedbyhsiidc": "Allotedbyhsiidc",
+            "estate": "Estate",
+            "cluster": "Cluster",
+            "phase": "Phase",
+            "sector": "Sector",
+            "plotno": "Plotno",
+            "hadbastno": "Hadbastno",
+            "khasradocument": "Khasradocument",
+            "lies_under_mc": "Lies Under Mc",
+            "distance_from_mc": "Distance From Mc",
+            "located_in_urban": "Located In Urban",
+            "revenue_shajra_document": "Revenue Shajra Document",
+            "jamabandi_document": "Jamabandi Document",
+            "nonencumbrancecertificate": "Nonencumbrancecertificate",
+            "totalproposedprojectarea": "Totalproposedprojectarea",
+            "proposed_build_up_area": "Proposed Build Up Area",
+            "secotr": "Secotr",
+            "projectpurpose": "Projectpurpose",
+            "size_of_industry": "Size Of Industry",
+            "project_type": "Project Type",
+            "nic_code": "Nic Code",
+            "category_of_project": "Category Of Project",
+            "collaboration_with_foreign": "Collaboration With Foreign",
+            "detail_project_report": "Detail Project Report",
+            "existing_regulatory_approval": "Existing Regulatory Approval",
+            "approval_application_form": "Approval Application Form",
+            "approval_document": "Approval Document",
+            "edc_sif_clu_fee_paid_applicable": "Edc Sif Clu Fee Paid Applicable",
+            "edc_sif_clu_fee_document": "Edc Sif Clu Fee Document",
+            "propose_employeement": "Propose Employeement"
+        }
+    }
+}

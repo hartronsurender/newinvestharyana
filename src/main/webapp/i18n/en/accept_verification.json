@@ -1,0 +1,25 @@
+{
+    "investhryApp": {
+        "accept_verification" : {
+            "home": {
+                "title": "Accept Verifications",
+                "createLabel": "Create a new Accept Verification",
+                "createOrEditLabel": "Create or edit a Accept Verification"
+            },
+            "created": "A new Accept Verification is created with identifier {{ param }}",
+            "updated": "A Accept Verification is updated with identifier {{ param }}",
+            "deleted": "A Accept Verification is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Accept Verification {{ id }}?"
+            },
+            "detail": {
+                "title": "Accept Verification"
+            },
+            "projectid": "Projectid",
+            "investorid": "Investorid",
+            "acceptcondition": "Acceptcondition",
+            "applicationdate": "Applicationdate",
+            "signature_document": "Signature Document"
+        }
+    }
+}

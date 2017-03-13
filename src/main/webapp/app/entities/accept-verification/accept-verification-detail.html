@@ -1,0 +1,42 @@
+
+<div>
+    <h2><span data-translate="investhryApp.accept_verification.detail.title">Accept Verification</span> {{vm.accept_verification.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="investhryApp.accept_verification.projectid">Projectid</span></dt>
+        <dd>
+            <span>{{vm.accept_verification.projectid}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.accept_verification.investorid">Investorid</span></dt>
+        <dd>
+            <span>{{vm.accept_verification.investorid}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.accept_verification.acceptcondition">Acceptcondition</span></dt>
+        <dd>
+            <span>{{vm.accept_verification.acceptcondition}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.accept_verification.applicationdate">Applicationdate</span></dt>
+        <dd>
+            <span>{{vm.accept_verification.applicationdate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.accept_verification.signature_document">Signature Document</span></dt>
+        <dd>
+            <div ng-if="vm.accept_verification.signature_document">
+                <a ng-click="vm.openFile(vm.accept_verification.signature_documentContentType, vm.accept_verification.signature_document)" data-translate="entity.action.open">open</a>
+                {{vm.accept_verification.signature_documentContentType}}, {{vm.byteSize(vm.accept_verification.signature_document)}}
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="accept-verification-detail.edit({id:vm.accept_verification.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,41 @@
+{
+    "investhryApp": {
+        "projectsitedetail" : {
+            "home": {
+                "title": "Projectsitedetails",
+                "createLabel": "Create a new Projectsitedetail",
+                "createOrEditLabel": "Create or edit a Projectsitedetail"
+            },
+            "created": "A new Projectsitedetail is created with identifier {{ param }}",
+            "updated": "A Projectsitedetail is updated with identifier {{ param }}",
+            "deleted": "A Projectsitedetail is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Projectsitedetail {{ id }}?"
+            },
+            "detail": {
+                "title": "Projectsitedetail"
+            },
+            "projectid": "Projectid",
+            "certifiedownership": "Certifiedownership",
+            "ownership_document": "Ownership Document",
+            "leaseapplicable": "Leaseapplicable",
+            "lease_document": "Lease Document",
+            "landagreementapplicable": "Landagreementapplicable",
+            "landagreement_document": "Landagreement Document",
+            "siteplan_document": "Siteplan Document",
+            "locationplan_document": "Locationplan Document",
+            "linearstripplan_document": "Linearstripplan Document",
+            "connectingroadid": "Connectingroadid",
+            "intersection_distance": "Intersection Distance",
+            "railway_distance": "Railway Distance",
+            "confirmity_landuse": "Confirmity Landuse",
+            "landzone_usetype": "Landzone Usetype",
+            "sitesituated_document": "Sitesituated Document",
+            "building_existed": "Building Existed",
+            "existing_building_applicable": "Existing Building Applicable",
+            "building_plan_document": "Building Plan Document",
+            "sitesituatedincontrolledarea": "Sitesituatedincontrolledarea",
+            "controlled_area_document": "Controlled Area Document"
+        }
+    }
+}

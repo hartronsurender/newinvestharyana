@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "emission_particulars" : {
+            "home": {
+                "title": "Emission Particulars",
+                "createLabel": "Create a new Emission Particulars",
+                "createOrEditLabel": "Create or edit a Emission Particulars"
+            },
+            "created": "A new Emission Particulars is created with identifier {{ param }}",
+            "updated": "A Emission Particulars is updated with identifier {{ param }}",
+            "deleted": "A Emission Particulars is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Emission Particulars {{ id }}?"
+            },
+            "detail": {
+                "title": "Emission Particulars"
+            },
+            "particular_type": "Particular Type"
+        }
+    }
+}

@@ -1,0 +1,76 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myAccept_verificationLabel" data-translate="investhryApp.accept_verification.home.createOrEditLabel">Create or edit a Accept Verification</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.accept_verification.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.accept_verification.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.accept_verification.projectid" for="field_projectid">Projectid</label>
+            <input type="text" class="form-control" name="projectid" id="field_projectid"
+                    ng-model="vm.accept_verification.projectid"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.accept_verification.investorid" for="field_investorid">Investorid</label>
+            <input type="text" class="form-control" name="investorid" id="field_investorid"
+                    ng-model="vm.accept_verification.investorid"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.accept_verification.acceptcondition" for="field_acceptcondition">Acceptcondition</label>
+            <input type="checkbox" class="form-control" name="acceptcondition" id="field_acceptcondition"
+                    ng-model="vm.accept_verification.acceptcondition"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.accept_verification.applicationdate" for="field_applicationdate">Applicationdate</label>
+                <div class="input-group">
+                    <input id="field_applicationdate" type="text" class="form-control" name="applicationdate" datetime-picker="{{dateformat}}" ng-model="vm.accept_verification.applicationdate" is-open="vm.datePickerOpenStatus.applicationdate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('applicationdate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setSignature_document($file, vm.accept_verification)">
+            <label class="control-label" data-translate="investhryApp.accept_verification.signature_document" for="field_signature_document">Signature Document</label>
+            <div>
+                <div ng-if="vm.accept_verification.signature_document" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.accept_verification.signature_documentContentType, vm.accept_verification.signature_document)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.accept_verification.signature_documentContentType}}, {{vm.byteSize(vm.accept_verification.signature_document)}}</span>
+                    <button type="button" ng-click="vm.accept_verification.signature_document=null;vm.accept_verification.signature_documentContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setSignature_document($file, vm.accept_verification)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="signature_document" id="field_signature_document"
+                    ng-model="vm.accept_verification.signature_document"
+                    />
+            <input type="hidden" class="form-control" name="signature_documentContentType" id="field_signature_documentContentType"
+                    ng-model="vm.accept_verification.signature_documentContentType" />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

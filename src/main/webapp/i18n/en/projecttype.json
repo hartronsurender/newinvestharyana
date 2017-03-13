@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "projecttype" : {
+            "home": {
+                "title": "Projecttypes",
+                "createLabel": "Create a new Projecttype",
+                "createOrEditLabel": "Create or edit a Projecttype"
+            },
+            "created": "A new Projecttype is created with identifier {{ param }}",
+            "updated": "A Projecttype is updated with identifier {{ param }}",
+            "deleted": "A Projecttype is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Projecttype {{ id }}?"
+            },
+            "detail": {
+                "title": "Projecttype"
+            },
+            "projecttype_name": "Projecttype Name"
+        }
+    }
+}

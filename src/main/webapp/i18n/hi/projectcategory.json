@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "projectcategory" : {
+            "home": {
+                "title": "Projectcategories",
+                "createLabel": "नया Projectcategory बनाएँ",
+                "createOrEditLabel": "Projectcategory बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Projectcategory [identifier: {{ param }}] तैयार है",
+            "updated": "एक Projectcategory [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Projectcategory [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Projectcategory [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Projectcategory"
+            },
+            "projectcategoryname": "Projectcategoryname"
+        }
+    }
+}

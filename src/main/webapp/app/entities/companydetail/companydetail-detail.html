@@ -1,0 +1,112 @@
+
+<div>
+    <h2><span data-translate="investhryApp.companydetail.detail.title">Companydetail</span> {{vm.companydetail.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="investhryApp.companydetail.investorid">Investorid</span></dt>
+        <dd>
+            <span>{{vm.companydetail.investorid}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.companydetail.promoter_md_director">Promoter Md Director</span></dt>
+        <dd>
+            <span>{{vm.companydetail.promoter_md_director}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.companydetail.designation">Designation</span></dt>
+        <dd>
+            <span>{{vm.companydetail.designation}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.companydetail.businessentity">Businessentity</span></dt>
+        <dd>
+            <span>{{vm.companydetail.businessentity}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.companydetail.businesstype">Businesstype</span></dt>
+        <dd>
+            <span>{{vm.companydetail.businesstype}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.companydetail.number_of_director_mds_ceo">Number Of Director Mds Ceo</span></dt>
+        <dd>
+            <span>{{vm.companydetail.number_of_director_mds_ceo}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.companydetail.list_director_md_ceo">List Director Md Ceo</span></dt>
+        <dd>
+            <div ng-if="vm.companydetail.list_director_md_ceo">
+                <a ng-click="vm.openFile(vm.companydetail.list_director_md_ceoContentType, vm.companydetail.list_director_md_ceo)" data-translate="entity.action.open">open</a>
+                {{vm.companydetail.list_director_md_ceoContentType}}, {{vm.byteSize(vm.companydetail.list_director_md_ceo)}}
+            </div>
+        </dd>
+        <dt><span data-translate="investhryApp.companydetail.pannumber">Pannumber</span></dt>
+        <dd>
+            <span>{{vm.companydetail.pannumber}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.companydetail.pancard">Pancard</span></dt>
+        <dd>
+            <div ng-if="vm.companydetail.pancard">
+                <a ng-click="vm.openFile(vm.companydetail.pancardContentType, vm.companydetail.pancard)" data-translate="entity.action.open">open</a>
+                {{vm.companydetail.pancardContentType}}, {{vm.byteSize(vm.companydetail.pancard)}}
+            </div>
+        </dd>
+        <dt><span data-translate="investhryApp.companydetail.aadharnumber">Aadharnumber</span></dt>
+        <dd>
+            <span>{{vm.companydetail.aadharnumber}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.companydetail.aadharcard">Aadharcard</span></dt>
+        <dd>
+            <div ng-if="vm.companydetail.aadharcard">
+                <a ng-click="vm.openFile(vm.companydetail.aadharcardContentType, vm.companydetail.aadharcard)" data-translate="entity.action.open">open</a>
+                {{vm.companydetail.aadharcardContentType}}, {{vm.byteSize(vm.companydetail.aadharcard)}}
+            </div>
+        </dd>
+        <dt><span data-translate="investhryApp.companydetail.nri">Nri</span></dt>
+        <dd>
+            <span>{{vm.companydetail.nri}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.companydetail.tin_vat_no">Tin Vat No</span></dt>
+        <dd>
+            <span>{{vm.companydetail.tin_vat_no}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.companydetail.tin_vat_document">Tin Vat Document</span></dt>
+        <dd>
+            <div ng-if="vm.companydetail.tin_vat_document">
+                <a ng-click="vm.openFile(vm.companydetail.tin_vat_documentContentType, vm.companydetail.tin_vat_document)" data-translate="entity.action.open">open</a>
+                {{vm.companydetail.tin_vat_documentContentType}}, {{vm.byteSize(vm.companydetail.tin_vat_document)}}
+            </div>
+        </dd>
+        <dt><span data-translate="investhryApp.companydetail.cstno">Cstno</span></dt>
+        <dd>
+            <span>{{vm.companydetail.cstno}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.companydetail.cstdocument">Cstdocument</span></dt>
+        <dd>
+            <div ng-if="vm.companydetail.cstdocument">
+                <a ng-click="vm.openFile(vm.companydetail.cstdocumentContentType, vm.companydetail.cstdocument)" data-translate="entity.action.open">open</a>
+                {{vm.companydetail.cstdocumentContentType}}, {{vm.byteSize(vm.companydetail.cstdocument)}}
+            </div>
+        </dd>
+        <dt><span data-translate="investhryApp.companydetail.moa_partnershipdeed_document">Moa Partnershipdeed Document</span></dt>
+        <dd>
+            <div ng-if="vm.companydetail.moa_partnershipdeed_document">
+                <a ng-click="vm.openFile(vm.companydetail.moa_partnershipdeed_documentContentType, vm.companydetail.moa_partnershipdeed_document)" data-translate="entity.action.open">open</a>
+                {{vm.companydetail.moa_partnershipdeed_documentContentType}}, {{vm.byteSize(vm.companydetail.moa_partnershipdeed_document)}}
+            </div>
+        </dd>
+        <dt><span data-translate="investhryApp.companydetail.registration_document">Registration Document</span></dt>
+        <dd>
+            <div ng-if="vm.companydetail.registration_document">
+                <a ng-click="vm.openFile(vm.companydetail.registration_documentContentType, vm.companydetail.registration_document)" data-translate="entity.action.open">open</a>
+                {{vm.companydetail.registration_documentContentType}}, {{vm.byteSize(vm.companydetail.registration_document)}}
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="companydetail-detail.edit({id:vm.companydetail.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

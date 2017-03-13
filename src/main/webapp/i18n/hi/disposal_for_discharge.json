@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "disposal_for_discharge" : {
+            "home": {
+                "title": "Disposal_for_discharges",
+                "createLabel": "नया Disposal For Discharge बनाएँ",
+                "createOrEditLabel": "Disposal For Discharge बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Disposal For Discharge [identifier: {{ param }}] तैयार है",
+            "updated": "एक Disposal For Discharge [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Disposal For Discharge [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Disposal For Discharge [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Disposal For Discharge"
+            },
+            "disposal_for_discharge_type": "Disposal For Discharge Type"
+        }
+    }
+}

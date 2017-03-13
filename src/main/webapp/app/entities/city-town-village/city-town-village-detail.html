@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span data-translate="investhryApp.city_town_village.detail.title">City Town Village</span> {{vm.city_town_village.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="investhryApp.city_town_village.stateid">Stateid</span></dt>
+        <dd>
+            <span>{{vm.city_town_village.stateid}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.city_town_village.districtid">Districtid</span></dt>
+        <dd>
+            <span>{{vm.city_town_village.districtid}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.city_town_village.blockid">Blockid</span></dt>
+        <dd>
+            <span>{{vm.city_town_village.blockid}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.city_town_village.city_town_village_name">City Town Village Name</span></dt>
+        <dd>
+            <span>{{vm.city_town_village.city_town_village_name}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.city_town_village.description">Description</span></dt>
+        <dd>
+            <span>{{vm.city_town_village.description}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="city-town-village-detail.edit({id:vm.city_town_village.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

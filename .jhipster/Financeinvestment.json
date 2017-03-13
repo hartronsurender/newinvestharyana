@@ -1,0 +1,59 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "projectid",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "land_cost",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "building_cost",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "plan_machinery_cost",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "misc_assets",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "totalproject_cost",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "fdi_applicable",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "fdi_country",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "fdi_value",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "fdi_resource",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "project_construction_start_date",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "project_commercial_activity_date",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20170313064649",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "financeinvestment",
+    "pagination": "no"
+}

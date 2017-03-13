@@ -1,0 +1,153 @@
+<div>
+    <h2 data-translate="investhryApp.projectdetail.home.title">Projectdetails</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="projectdetail.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="investhryApp.projectdetail.home.createLabel">
+                        Create new Projectdetail
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.siteaddress">Siteaddress</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.district">District</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.block">Block</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.city_town_village">City Town Village</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.tehsil_subtehsil">Tehsil Subtehsil</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.multyvillageinvolved">Multyvillageinvolved</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.villageinvolved">Villageinvolved</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.falls_in_aravalli">Falls In Aravalli</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.landprocured">Landprocured</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.allotedbyhsiidc">Allotedbyhsiidc</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.estate">Estate</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.cluster">Cluster</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.phase">Phase</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.sector">Sector</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.plotno">Plotno</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.hadbastno">Hadbastno</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.khasradocument">Khasradocument</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.lies_under_mc">Lies Under Mc</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.distance_from_mc">Distance From Mc</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.located_in_urban">Located In Urban</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.revenue_shajra_document">Revenue Shajra Document</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.jamabandi_document">Jamabandi Document</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.nonencumbrancecertificate">Nonencumbrancecertificate</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.totalproposedprojectarea">Totalproposedprojectarea</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.proposed_build_up_area">Proposed Build Up Area</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.secotr">Secotr</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.projectpurpose">Projectpurpose</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.size_of_industry">Size Of Industry</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.project_type">Project Type</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.nic_code">Nic Code</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.category_of_project">Category Of Project</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.collaboration_with_foreign">Collaboration With Foreign</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.detail_project_report">Detail Project Report</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.existing_regulatory_approval">Existing Regulatory Approval</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.approval_application_form">Approval Application Form</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.approval_document">Approval Document</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.edc_sif_clu_fee_paid_applicable">Edc Sif Clu Fee Paid Applicable</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.edc_sif_clu_fee_document">Edc Sif Clu Fee Document</span></th>
+                    <th><span data-translate="investhryApp.projectdetail.propose_employeement">Propose Employeement</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="projectdetail in vm.projectdetails track by projectdetail.id">
+                    <td><a ui-sref="projectdetail-detail({id:projectdetail.id})">{{projectdetail.id}}</a></td>
+                    <td>{{projectdetail.siteaddress}}</td>
+                    <td>{{projectdetail.district}}</td>
+                    <td>{{projectdetail.block}}</td>
+                    <td>{{projectdetail.city_town_village}}</td>
+                    <td>{{projectdetail.tehsil_subtehsil}}</td>
+                    <td>{{projectdetail.multyvillageinvolved}}</td>
+                    <td>{{projectdetail.villageinvolved}}</td>
+                    <td>{{projectdetail.falls_in_aravalli}}</td>
+                    <td>{{projectdetail.landprocured}}</td>
+                    <td>{{projectdetail.allotedbyhsiidc}}</td>
+                    <td>{{projectdetail.estate}}</td>
+                    <td>{{projectdetail.cluster}}</td>
+                    <td>{{projectdetail.phase}}</td>
+                    <td>{{projectdetail.sector}}</td>
+                    <td>{{projectdetail.plotno}}</td>
+                    <td>{{projectdetail.hadbastno}}</td>
+                    <td>
+                        <a ng-if="projectdetail.khasradocument" ng-click="vm.openFile(projectdetail.khasradocumentContentType, projectdetail.khasradocument)" data-translate="entity.action.open">open</a>
+                        <span ng-if="projectdetail.khasradocument">{{projectdetail.khasradocumentContentType}}, {{vm.byteSize(projectdetail.khasradocument)}}</span>
+                    </td>
+                    <td>{{projectdetail.lies_under_mc}}</td>
+                    <td>{{projectdetail.distance_from_mc}}</td>
+                    <td>{{projectdetail.located_in_urban}}</td>
+                    <td>
+                        <a ng-if="projectdetail.revenue_shajra_document" ng-click="vm.openFile(projectdetail.revenue_shajra_documentContentType, projectdetail.revenue_shajra_document)" data-translate="entity.action.open">open</a>
+                        <span ng-if="projectdetail.revenue_shajra_document">{{projectdetail.revenue_shajra_documentContentType}}, {{vm.byteSize(projectdetail.revenue_shajra_document)}}</span>
+                    </td>
+                    <td>
+                        <a ng-if="projectdetail.jamabandi_document" ng-click="vm.openFile(projectdetail.jamabandi_documentContentType, projectdetail.jamabandi_document)" data-translate="entity.action.open">open</a>
+                        <span ng-if="projectdetail.jamabandi_document">{{projectdetail.jamabandi_documentContentType}}, {{vm.byteSize(projectdetail.jamabandi_document)}}</span>
+                    </td>
+                    <td>
+                        <a ng-if="projectdetail.nonencumbrancecertificate" ng-click="vm.openFile(projectdetail.nonencumbrancecertificateContentType, projectdetail.nonencumbrancecertificate)" data-translate="entity.action.open">open</a>
+                        <span ng-if="projectdetail.nonencumbrancecertificate">{{projectdetail.nonencumbrancecertificateContentType}}, {{vm.byteSize(projectdetail.nonencumbrancecertificate)}}</span>
+                    </td>
+                    <td>{{projectdetail.totalproposedprojectarea}}</td>
+                    <td>{{projectdetail.proposed_build_up_area}}</td>
+                    <td>{{projectdetail.secotr}}</td>
+                    <td>{{projectdetail.projectpurpose}}</td>
+                    <td>{{projectdetail.size_of_industry}}</td>
+                    <td>{{projectdetail.project_type}}</td>
+                    <td>{{projectdetail.nic_code}}</td>
+                    <td>{{projectdetail.category_of_project}}</td>
+                    <td>{{projectdetail.collaboration_with_foreign}}</td>
+                    <td>
+                        <a ng-if="projectdetail.detail_project_report" ng-click="vm.openFile(projectdetail.detail_project_reportContentType, projectdetail.detail_project_report)" data-translate="entity.action.open">open</a>
+                        <span ng-if="projectdetail.detail_project_report">{{projectdetail.detail_project_reportContentType}}, {{vm.byteSize(projectdetail.detail_project_report)}}</span>
+                    </td>
+                    <td>{{projectdetail.existing_regulatory_approval}}</td>
+                    <td>{{projectdetail.approval_application_form}}</td>
+                    <td>
+                        <a ng-if="projectdetail.approval_document" ng-click="vm.openFile(projectdetail.approval_documentContentType, projectdetail.approval_document)" data-translate="entity.action.open">open</a>
+                        <span ng-if="projectdetail.approval_document">{{projectdetail.approval_documentContentType}}, {{vm.byteSize(projectdetail.approval_document)}}</span>
+                    </td>
+                    <td>{{projectdetail.edc_sif_clu_fee_paid_applicable}}</td>
+                    <td>
+                        <a ng-if="projectdetail.edc_sif_clu_fee_document" ng-click="vm.openFile(projectdetail.edc_sif_clu_fee_documentContentType, projectdetail.edc_sif_clu_fee_document)" data-translate="entity.action.open">open</a>
+                        <span ng-if="projectdetail.edc_sif_clu_fee_document">{{projectdetail.edc_sif_clu_fee_documentContentType}}, {{vm.byteSize(projectdetail.edc_sif_clu_fee_document)}}</span>
+                    </td>
+                    <td>{{projectdetail.propose_employeement}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="projectdetail-detail({id:projectdetail.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="projectdetail.edit({id:projectdetail.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="projectdetail.delete({id:projectdetail.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "particular_type",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170313073530",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "emission_particulars",
+    "pagination": "no"
+}

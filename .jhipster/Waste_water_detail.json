@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "projectid",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "source_of_generation",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nature_type",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "quantity",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mode_of_disposal",
+            "fieldType": "UUID"
+        }
+    ],
+    "changelogDate": "20170313070749",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "waste_water_detail",
+    "pagination": "no"
+}

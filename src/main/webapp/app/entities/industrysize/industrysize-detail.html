@@ -1,0 +1,23 @@
+
+<div>
+    <h2><span data-translate="investhryApp.industrysize.detail.title">Industrysize</span> {{vm.industrysize.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="investhryApp.industrysize.size_of_industry">Size Of Industry</span></dt>
+        <dd>
+            <span>{{vm.industrysize.size_of_industry}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="industrysize-detail.edit({id:vm.industrysize.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

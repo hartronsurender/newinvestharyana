@@ -1,0 +1,60 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myProjectphaseLabel" data-translate="investhryApp.projectphase.home.createOrEditLabel">Create or edit a Projectphase</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.projectphase.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.projectphase.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectphase.projectid" for="field_projectid">Projectid</label>
+            <input type="text" class="form-control" name="projectid" id="field_projectid"
+                    ng-model="vm.projectphase.projectid"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectphase.fciphase" for="field_fciphase">Fciphase</label>
+            <input type="text" class="form-control" name="fciphase" id="field_fciphase"
+                    ng-model="vm.projectphase.fciphase"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectphase.fci_product_category" for="field_fci_product_category">Fci Product Category</label>
+            <input type="text" class="form-control" name="fci_product_category" id="field_fci_product_category"
+                    ng-model="vm.projectphase.fci_product_category"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectphase.fci" for="field_fci">Fci</label>
+            <input type="text" class="form-control" name="fci" id="field_fci"
+                    ng-model="vm.projectphase.fci"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="investhryApp.projectphase.fic_implementation_date" for="field_fic_implementation_date">Fic Implementation Date</label>
+                <div class="input-group">
+                    <input id="field_fic_implementation_date" type="text" class="form-control" name="fic_implementation_date" datetime-picker="{{dateformat}}" ng-model="vm.projectphase.fic_implementation_date" is-open="vm.datePickerOpenStatus.fic_implementation_date"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('fic_implementation_date')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

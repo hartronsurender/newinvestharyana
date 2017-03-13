@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "emission_air_pollution" : {
+            "home": {
+                "title": "Emission Air Pollutions",
+                "createLabel": "Create a new Emission Air Pollution",
+                "createOrEditLabel": "Create or edit a Emission Air Pollution"
+            },
+            "created": "A new Emission Air Pollution is created with identifier {{ param }}",
+            "updated": "A Emission Air Pollution is updated with identifier {{ param }}",
+            "deleted": "A Emission Air Pollution is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Emission Air Pollution {{ id }}?"
+            },
+            "detail": {
+                "title": "Emission Air Pollution"
+            },
+            "pollution_controll_device": "Pollution Controll Device"
+        }
+    }
+}

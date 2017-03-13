@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span data-translate="investhryApp.emissiondetail.detail.title">Emissiondetail</span> {{vm.emissiondetail.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="investhryApp.emissiondetail.projectid">Projectid</span></dt>
+        <dd>
+            <span>{{vm.emissiondetail.projectid}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.emissiondetail.particulars">Particulars</span></dt>
+        <dd>
+            <span>{{vm.emissiondetail.particulars}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.emissiondetail.capacity">Capacity</span></dt>
+        <dd>
+            <span>{{vm.emissiondetail.capacity}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.emissiondetail.type_of_fuel">Type Of Fuel</span></dt>
+        <dd>
+            <span>{{vm.emissiondetail.type_of_fuel}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.emissiondetail.air_pollution_control_device">Air Pollution Control Device</span></dt>
+        <dd>
+            <span>{{vm.emissiondetail.air_pollution_control_device}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="emissiondetail-detail.edit({id:vm.emissiondetail.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

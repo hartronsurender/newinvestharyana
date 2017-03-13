@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "emission_particulars" : {
+            "home": {
+                "title": "Emission_particulars",
+                "createLabel": "नया Emission Particulars बनाएँ",
+                "createOrEditLabel": "Emission Particulars बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Emission Particulars [identifier: {{ param }}] तैयार है",
+            "updated": "एक Emission Particulars [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Emission Particulars [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Emission Particulars [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Emission Particulars"
+            },
+            "particular_type": "Particular Type"
+        }
+    }
+}

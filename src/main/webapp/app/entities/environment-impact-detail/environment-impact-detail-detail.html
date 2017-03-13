@@ -1,0 +1,82 @@
+
+<div>
+    <h2><span data-translate="investhryApp.environment_impact_detail.detail.title">Environment Impact Detail</span> {{vm.environment_impact_detail.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="investhryApp.environment_impact_detail.projectid">Projectid</span></dt>
+        <dd>
+            <span>{{vm.environment_impact_detail.projectid}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.environment_impact_detail.water_supply_source">Water Supply Source</span></dt>
+        <dd>
+            <span>{{vm.environment_impact_detail.water_supply_source}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.environment_impact_detail.water_usage_process">Water Usage Process</span></dt>
+        <dd>
+            <span>{{vm.environment_impact_detail.water_usage_process}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.environment_impact_detail.water_usage_cooling">Water Usage Cooling</span></dt>
+        <dd>
+            <span>{{vm.environment_impact_detail.water_usage_cooling}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.environment_impact_detail.water_usage_domestic">Water Usage Domestic</span></dt>
+        <dd>
+            <span>{{vm.environment_impact_detail.water_usage_domestic}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.environment_impact_detail.water_usage_other">Water Usage Other</span></dt>
+        <dd>
+            <span>{{vm.environment_impact_detail.water_usage_other}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.environment_impact_detail.water_waste_process">Water Waste Process</span></dt>
+        <dd>
+            <span>{{vm.environment_impact_detail.water_waste_process}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.environment_impact_detail.water_waste_cooling">Water Waste Cooling</span></dt>
+        <dd>
+            <span>{{vm.environment_impact_detail.water_waste_cooling}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.environment_impact_detail.water_waste_domesting">Water Waste Domesting</span></dt>
+        <dd>
+            <span>{{vm.environment_impact_detail.water_waste_domesting}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.environment_impact_detail.water_waste_other">Water Waste Other</span></dt>
+        <dd>
+            <span>{{vm.environment_impact_detail.water_waste_other}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.environment_impact_detail.waste_water_treatment">Waste Water Treatment</span></dt>
+        <dd>
+            <span>{{vm.environment_impact_detail.waste_water_treatment}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.environment_impact_detail.waste_water_treatment_document">Waste Water Treatment Document</span></dt>
+        <dd>
+            <div ng-if="vm.environment_impact_detail.waste_water_treatment_document">
+                <a ng-click="vm.openFile(vm.environment_impact_detail.waste_water_treatment_documentContentType, vm.environment_impact_detail.waste_water_treatment_document)" data-translate="entity.action.open">open</a>
+                {{vm.environment_impact_detail.waste_water_treatment_documentContentType}}, {{vm.byteSize(vm.environment_impact_detail.waste_water_treatment_document)}}
+            </div>
+        </dd>
+        <dt><span data-translate="investhryApp.environment_impact_detail.mode_of_disposal">Mode Of Disposal</span></dt>
+        <dd>
+            <span>{{vm.environment_impact_detail.mode_of_disposal}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.environment_impact_detail.emissionid">Emissionid</span></dt>
+        <dd>
+            <span>{{vm.environment_impact_detail.emissionid}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.environment_impact_detail.water_waste_id">Water Waste Id</span></dt>
+        <dd>
+            <span>{{vm.environment_impact_detail.water_waste_id}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="environment-impact-detail-detail.edit({id:vm.environment_impact_detail.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

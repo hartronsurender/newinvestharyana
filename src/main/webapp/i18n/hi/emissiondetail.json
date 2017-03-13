@@ -1,0 +1,25 @@
+{
+    "investhryApp": {
+        "emissiondetail" : {
+            "home": {
+                "title": "Emissiondetails",
+                "createLabel": "नया Emissiondetail बनाएँ",
+                "createOrEditLabel": "Emissiondetail बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Emissiondetail [identifier: {{ param }}] तैयार है",
+            "updated": "एक Emissiondetail [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Emissiondetail [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Emissiondetail [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Emissiondetail"
+            },
+            "projectid": "Projectid",
+            "particulars": "Particulars",
+            "capacity": "Capacity",
+            "type_of_fuel": "Type Of Fuel",
+            "air_pollution_control_device": "Air Pollution Control Device"
+        }
+    }
+}

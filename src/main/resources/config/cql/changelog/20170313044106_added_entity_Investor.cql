@@ -1,0 +1,26 @@
+
+CREATE TABLE IF NOT EXISTS investor (
+    id uuid,
+    mouapplicable boolean,
+    mousignyear int,
+    moudocument blob,
+    moudocument_content_type text,
+    mouidnumber text,
+    investorphoto blob,
+    investorphoto_content_type text,
+    inv_f_name text,
+    inv_m_name text,
+    inv_l_name text,
+    invaddress1 text,
+    invaddress2 text,
+    invaddress3 text,
+    phone double,
+    mobile double,
+    fax double,
+    emailprimary text,
+    emailsecondary text,
+    country uuid,
+    state uuid,
+    city uuid,
+    PRIMARY KEY(id)
+);

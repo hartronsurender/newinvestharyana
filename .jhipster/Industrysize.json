@@ -1,0 +1,15 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "size_of_industry",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170313074159",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "industrysize",
+    "pagination": "no"
+}

@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "manufactur_unit" : {
+            "home": {
+                "title": "Manufactur_units",
+                "createLabel": "नया Manufactur Unit बनाएँ",
+                "createOrEditLabel": "Manufactur Unit बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Manufactur Unit [identifier: {{ param }}] तैयार है",
+            "updated": "एक Manufactur Unit [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Manufactur Unit [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Manufactur Unit [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Manufactur Unit"
+            },
+            "unit_type": "Unit Type"
+        }
+    }
+}

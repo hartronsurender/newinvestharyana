@@ -1,0 +1,15 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "foreign_funding_resource_type",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170313074032",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "foreignfundingresource",
+    "pagination": "no"
+}

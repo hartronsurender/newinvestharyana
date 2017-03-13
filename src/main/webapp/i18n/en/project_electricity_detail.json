@@ -1,0 +1,40 @@
+{
+    "investhryApp": {
+        "project_electricity_detail" : {
+            "home": {
+                "title": "Project Electricity Details",
+                "createLabel": "Create a new Project Electricity Detail",
+                "createOrEditLabel": "Create or edit a Project Electricity Detail"
+            },
+            "created": "A new Project Electricity Detail is created with identifier {{ param }}",
+            "updated": "A Project Electricity Detail is updated with identifier {{ param }}",
+            "deleted": "A Project Electricity Detail is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Project Electricity Detail {{ id }}?"
+            },
+            "detail": {
+                "title": "Project Electricity Detail"
+            },
+            "projectid": "Projectid",
+            "temporaryconnection": "Temporaryconnection",
+            "load_required": "Load Required",
+            "existing_connecton": "Existing Connecton",
+            "account_number": "Account Number",
+            "load_demand": "Load Demand",
+            "load_demand_kva": "Load Demand Kva",
+            "new_load_demand_kw": "New Load Demand Kw",
+            "new_load_demand_kva": "New Load Demand Kva",
+            "load_demand_date": "Load Demand Date",
+            "regular_connection": "Regular Connection",
+            "regular_load_required": "Regular Load Required",
+            "regular_existing_connection": "Regular Existing Connection",
+            "regular_uhbvn_dhbvn_customer_type": "Regular Uhbvn Dhbvn Customer Type",
+            "regular_account_number": "Regular Account Number",
+            "regular_load_if_any_kw": "Regular Load If Any Kw",
+            "regular_existing_load_kva": "Regular Existing Load Kva",
+            "regular_new_load_demand_kw": "Regular New Load Demand Kw",
+            "regular_new_load_demand_kva": "Regular New Load Demand Kva",
+            "regular_demand_date": "Regular Demand Date"
+        }
+    }
+}

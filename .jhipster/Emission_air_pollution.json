@@ -1,0 +1,15 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "pollution_controll_device",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170313073653",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "emission_air_pollution",
+    "pagination": "no"
+}

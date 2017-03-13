@@ -1,0 +1,39 @@
+{
+    "investhryApp": {
+        "investor" : {
+            "home": {
+                "title": "Investors",
+                "createLabel": "नया Investor बनाएँ",
+                "createOrEditLabel": "Investor बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Investor [identifier: {{ param }}] तैयार है",
+            "updated": "एक Investor [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Investor [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Investor [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Investor"
+            },
+            "mouapplicable": "Mouapplicable",
+            "mousignyear": "Mousignyear",
+            "moudocument": "Moudocument",
+            "mouidnumber": "Mouidnumber",
+            "investorphoto": "Investorphoto",
+            "inv_f_name": "Inv F Name",
+            "inv_m_name": "Inv M Name",
+            "inv_l_name": "Inv L Name",
+            "invaddress1": "Invaddress 1",
+            "invaddress2": "Invaddress 2",
+            "invaddress3": "Invaddress 3",
+            "phone": "Phone",
+            "mobile": "Mobile",
+            "fax": "Fax",
+            "emailprimary": "Emailprimary",
+            "emailsecondary": "Emailsecondary",
+            "country": "Country",
+            "state": "State",
+            "city": "City"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "water_supply_source" : {
+            "home": {
+                "title": "Water Supply Sources",
+                "createLabel": "Create a new Water Supply Source",
+                "createOrEditLabel": "Create or edit a Water Supply Source"
+            },
+            "created": "A new Water Supply Source is created with identifier {{ param }}",
+            "updated": "A Water Supply Source is updated with identifier {{ param }}",
+            "deleted": "A Water Supply Source is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Water Supply Source {{ id }}?"
+            },
+            "detail": {
+                "title": "Water Supply Source"
+            },
+            "source_type": "Source Type"
+        }
+    }
+}

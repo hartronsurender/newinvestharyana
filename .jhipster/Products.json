@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "projectid",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "main_product",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "product_quantity",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "units",
+            "fieldType": "UUID"
+        }
+    ],
+    "changelogDate": "20170313070043",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "products",
+    "pagination": "no"
+}

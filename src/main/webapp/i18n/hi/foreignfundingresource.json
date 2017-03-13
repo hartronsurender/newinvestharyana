@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "foreignfundingresource" : {
+            "home": {
+                "title": "Foreignfundingresources",
+                "createLabel": "नया Foreignfundingresource बनाएँ",
+                "createOrEditLabel": "Foreignfundingresource बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Foreignfundingresource [identifier: {{ param }}] तैयार है",
+            "updated": "एक Foreignfundingresource [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Foreignfundingresource [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Foreignfundingresource [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Foreignfundingresource"
+            },
+            "foreign_funding_resource_type": "Foreign Funding Resource Type"
+        }
+    }
+}

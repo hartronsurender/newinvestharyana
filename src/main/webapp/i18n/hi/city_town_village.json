@@ -1,0 +1,25 @@
+{
+    "investhryApp": {
+        "city_town_village" : {
+            "home": {
+                "title": "City_town_villages",
+                "createLabel": "नया City Town Village बनाएँ",
+                "createOrEditLabel": "City Town Village बनाएँ या संपादित करें"
+            },
+            "created": "एक नया City Town Village [identifier: {{ param }}] तैयार है",
+            "updated": "एक City Town Village [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "City Town Village [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "City Town Village [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "City Town Village"
+            },
+            "stateid": "Stateid",
+            "districtid": "Districtid",
+            "blockid": "Blockid",
+            "city_town_village_name": "City Town Village Name",
+            "description": "Description"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "investhryApp": {
+        "city_town_village" : {
+            "home": {
+                "title": "City Town Villages",
+                "createLabel": "Create a new City Town Village",
+                "createOrEditLabel": "Create or edit a City Town Village"
+            },
+            "created": "A new City Town Village is created with identifier {{ param }}",
+            "updated": "A City Town Village is updated with identifier {{ param }}",
+            "deleted": "A City Town Village is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete City Town Village {{ id }}?"
+            },
+            "detail": {
+                "title": "City Town Village"
+            },
+            "stateid": "Stateid",
+            "districtid": "Districtid",
+            "blockid": "Blockid",
+            "city_town_village_name": "City Town Village Name",
+            "description": "Description"
+        }
+    }
+}

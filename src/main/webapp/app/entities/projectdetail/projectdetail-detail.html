@@ -1,0 +1,196 @@
+
+<div>
+    <h2><span data-translate="investhryApp.projectdetail.detail.title">Projectdetail</span> {{vm.projectdetail.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="investhryApp.projectdetail.siteaddress">Siteaddress</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.siteaddress}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.district">District</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.district}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.block">Block</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.block}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.city_town_village">City Town Village</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.city_town_village}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.tehsil_subtehsil">Tehsil Subtehsil</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.tehsil_subtehsil}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.multyvillageinvolved">Multyvillageinvolved</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.multyvillageinvolved}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.villageinvolved">Villageinvolved</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.villageinvolved}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.falls_in_aravalli">Falls In Aravalli</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.falls_in_aravalli}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.landprocured">Landprocured</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.landprocured}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.allotedbyhsiidc">Allotedbyhsiidc</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.allotedbyhsiidc}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.estate">Estate</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.estate}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.cluster">Cluster</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.cluster}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.phase">Phase</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.phase}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.sector">Sector</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.sector}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.plotno">Plotno</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.plotno}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.hadbastno">Hadbastno</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.hadbastno}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.khasradocument">Khasradocument</span></dt>
+        <dd>
+            <div ng-if="vm.projectdetail.khasradocument">
+                <a ng-click="vm.openFile(vm.projectdetail.khasradocumentContentType, vm.projectdetail.khasradocument)" data-translate="entity.action.open">open</a>
+                {{vm.projectdetail.khasradocumentContentType}}, {{vm.byteSize(vm.projectdetail.khasradocument)}}
+            </div>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.lies_under_mc">Lies Under Mc</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.lies_under_mc}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.distance_from_mc">Distance From Mc</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.distance_from_mc}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.located_in_urban">Located In Urban</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.located_in_urban}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.revenue_shajra_document">Revenue Shajra Document</span></dt>
+        <dd>
+            <div ng-if="vm.projectdetail.revenue_shajra_document">
+                <a ng-click="vm.openFile(vm.projectdetail.revenue_shajra_documentContentType, vm.projectdetail.revenue_shajra_document)" data-translate="entity.action.open">open</a>
+                {{vm.projectdetail.revenue_shajra_documentContentType}}, {{vm.byteSize(vm.projectdetail.revenue_shajra_document)}}
+            </div>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.jamabandi_document">Jamabandi Document</span></dt>
+        <dd>
+            <div ng-if="vm.projectdetail.jamabandi_document">
+                <a ng-click="vm.openFile(vm.projectdetail.jamabandi_documentContentType, vm.projectdetail.jamabandi_document)" data-translate="entity.action.open">open</a>
+                {{vm.projectdetail.jamabandi_documentContentType}}, {{vm.byteSize(vm.projectdetail.jamabandi_document)}}
+            </div>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.nonencumbrancecertificate">Nonencumbrancecertificate</span></dt>
+        <dd>
+            <div ng-if="vm.projectdetail.nonencumbrancecertificate">
+                <a ng-click="vm.openFile(vm.projectdetail.nonencumbrancecertificateContentType, vm.projectdetail.nonencumbrancecertificate)" data-translate="entity.action.open">open</a>
+                {{vm.projectdetail.nonencumbrancecertificateContentType}}, {{vm.byteSize(vm.projectdetail.nonencumbrancecertificate)}}
+            </div>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.totalproposedprojectarea">Totalproposedprojectarea</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.totalproposedprojectarea}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.proposed_build_up_area">Proposed Build Up Area</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.proposed_build_up_area}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.secotr">Secotr</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.secotr}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.projectpurpose">Projectpurpose</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.projectpurpose}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.size_of_industry">Size Of Industry</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.size_of_industry}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.project_type">Project Type</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.project_type}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.nic_code">Nic Code</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.nic_code}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.category_of_project">Category Of Project</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.category_of_project}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.collaboration_with_foreign">Collaboration With Foreign</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.collaboration_with_foreign}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.detail_project_report">Detail Project Report</span></dt>
+        <dd>
+            <div ng-if="vm.projectdetail.detail_project_report">
+                <a ng-click="vm.openFile(vm.projectdetail.detail_project_reportContentType, vm.projectdetail.detail_project_report)" data-translate="entity.action.open">open</a>
+                {{vm.projectdetail.detail_project_reportContentType}}, {{vm.byteSize(vm.projectdetail.detail_project_report)}}
+            </div>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.existing_regulatory_approval">Existing Regulatory Approval</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.existing_regulatory_approval}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.approval_application_form">Approval Application Form</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.approval_application_form}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.approval_document">Approval Document</span></dt>
+        <dd>
+            <div ng-if="vm.projectdetail.approval_document">
+                <a ng-click="vm.openFile(vm.projectdetail.approval_documentContentType, vm.projectdetail.approval_document)" data-translate="entity.action.open">open</a>
+                {{vm.projectdetail.approval_documentContentType}}, {{vm.byteSize(vm.projectdetail.approval_document)}}
+            </div>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.edc_sif_clu_fee_paid_applicable">Edc Sif Clu Fee Paid Applicable</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.edc_sif_clu_fee_paid_applicable}}</span>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.edc_sif_clu_fee_document">Edc Sif Clu Fee Document</span></dt>
+        <dd>
+            <div ng-if="vm.projectdetail.edc_sif_clu_fee_document">
+                <a ng-click="vm.openFile(vm.projectdetail.edc_sif_clu_fee_documentContentType, vm.projectdetail.edc_sif_clu_fee_document)" data-translate="entity.action.open">open</a>
+                {{vm.projectdetail.edc_sif_clu_fee_documentContentType}}, {{vm.byteSize(vm.projectdetail.edc_sif_clu_fee_document)}}
+            </div>
+        </dd>
+        <dt><span data-translate="investhryApp.projectdetail.propose_employeement">Propose Employeement</span></dt>
+        <dd>
+            <span>{{vm.projectdetail.propose_employeement}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="projectdetail-detail.edit({id:vm.projectdetail.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

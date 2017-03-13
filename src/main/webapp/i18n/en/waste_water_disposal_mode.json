@@ -1,0 +1,21 @@
+{
+    "investhryApp": {
+        "waste_water_disposal_mode" : {
+            "home": {
+                "title": "Waste Water Disposal Modes",
+                "createLabel": "Create a new Waste Water Disposal Mode",
+                "createOrEditLabel": "Create or edit a Waste Water Disposal Mode"
+            },
+            "created": "A new Waste Water Disposal Mode is created with identifier {{ param }}",
+            "updated": "A Waste Water Disposal Mode is updated with identifier {{ param }}",
+            "deleted": "A Waste Water Disposal Mode is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Waste Water Disposal Mode {{ id }}?"
+            },
+            "detail": {
+                "title": "Waste Water Disposal Mode"
+            },
+            "disposal_mode": "Disposal Mode"
+        }
+    }
+}

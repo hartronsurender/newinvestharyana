@@ -1,0 +1,72 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "projectid",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "water_supply_source",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "water_usage_process",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "water_usage_cooling",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "water_usage_domestic",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "water_usage_other",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "water_waste_process",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "water_waste_cooling",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "water_waste_domesting",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "water_waste_other",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "waste_water_treatment",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "waste_water_treatment_document",
+            "fieldType": "ByteBuffer",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "mode_of_disposal",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "emissionid",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "water_waste_id",
+            "fieldType": "UUID"
+        }
+    ],
+    "changelogDate": "20170313071608",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "environment_impact_detail",
+    "pagination": "no"
+}

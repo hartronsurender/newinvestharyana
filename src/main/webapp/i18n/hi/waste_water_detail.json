@@ -1,0 +1,25 @@
+{
+    "investhryApp": {
+        "waste_water_detail" : {
+            "home": {
+                "title": "Waste_water_details",
+                "createLabel": "नया Waste Water Detail बनाएँ",
+                "createOrEditLabel": "Waste Water Detail बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Waste Water Detail [identifier: {{ param }}] तैयार है",
+            "updated": "एक Waste Water Detail [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Waste Water Detail [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Waste Water Detail [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Waste Water Detail"
+            },
+            "projectid": "Projectid",
+            "source_of_generation": "Source Of Generation",
+            "nature_type": "Nature Type",
+            "quantity": "Quantity",
+            "mode_of_disposal": "Mode Of Disposal"
+        }
+    }
+}
